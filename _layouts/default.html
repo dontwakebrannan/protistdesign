@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+  <header role="banner">
+    {% if page.back %}
+      <span class="back-btn"><a href="{{ site.github.url }}{{ page.back }}">Back</a></span>
+    {% endif %}
+    <h1 class="logo">Protist</h1>
+    <h2>A Portland design studio with a strong sense of craft and wonder.</h2>
+    <nav role="navigation">
+      <ul>
+        <li><a href="#">Learn</a></li>
+        <li><a href="#">Work</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+{% include scripts.html %}
+</body>
+</html>
