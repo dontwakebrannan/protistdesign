@@ -10,3 +10,67 @@
   // background-color: rgba(0, 255, 0, 0.1);
   @include grid-visual(rgba(0, 255, 0, 0.1), $seven-grid);
 }
+
+// ABOUT SECTION
+.about {
+  @extend .main-section;
+}
+.about > div {
+  @extend .main-grid__twelve;
+  @include grid-media($main-grid) {
+    @include grid-column(6);
+  }
+}
+
+// PROCESS SECTION
+.process {}
+.step-one, .step-two, .step-three {
+  @extend .main-section;
+}
+.process-body {
+  @extend .main-grid__twelve;
+  @include grid-media($main-grid) {
+    @include grid-column(8);
+    @include grid-push(2, $main-grid);
+  }
+}
+
+// WORK SECTION
+.work {
+  @extend .main-section;
+}
+.work > div {
+  @extend .main-grid__twelve;
+}
+.work > div:first-child { // work heading
+  @extend .main-grid__twelve;
+  @include grid-media($main-grid) {
+    @include grid-column(8);
+    @include grid-push(2, $main-grid);
+  }
+}
+
+// PORTFOLIO HIGHLIGHTS
+.portfolio-highlights {
+  margin-bottom: $main-gutter;
+}
+
+// PORTFOLIO GALLERY
+ul.portfolio-gallery {
+  @extend .main-section;
+  padding-left: 0;
+}
+.portfolio-gallery li {
+  @extend .main-grid__six;
+  margin-bottom: $main-gutter;
+  @include grid-media($main-grid) {
+    @include grid-column(4);
+  }
+}
+
+// FOOTER
+footer {
+  min-height: 400px;
+  overflow: hidden;
+  background-color: red;
+}

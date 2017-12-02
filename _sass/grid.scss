@@ -1,6 +1,8 @@
+$main-gutter: 40px;
+
 $main-grid: (
   columns: 12,
-  gutter: 40px,
+  gutter: $main-gutter,
   media: 1000px,
 );
 

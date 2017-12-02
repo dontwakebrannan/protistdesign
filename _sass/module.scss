@@ -1,44 +1,7 @@
-// ABOUT SECTION
-.about {
-  @extend .main-section;
+// Portfolio gallery
+ul.portfolio-gallery {
+  list-style: none;
 }
-.about > div {
-  @extend .main-grid__twelve;
-  @include grid-media($main-grid) {
-    @include grid-column(6);
-  }
-}
+.portfolio-gallery li {
 
-// PROCESS SECTION
-.process {}
-.step-one, .step-two, .step-three {
-  @extend .main-section;
-}
-.process-body {
-  @extend .main-grid__twelve;
-  @include grid-media($main-grid) {
-    @include grid-column(8);
-    @include grid-push(2, $main-grid);
-  }
-}
-
-.work {
-  @extend .main-section;
-}
-.work > div {
-  @extend .main-grid__twelve;
-}
-.work > div:first-child { // work heading
-  @extend .main-grid__twelve;
-  @include grid-media($main-grid) {
-    @include grid-column(8);
-    @include grid-push(2, $main-grid);
-  }
-}
-
-// FOOTER
-footer {
-  min-height: 400px;
-  overflow: hidden;
-  background-color: red;
 }
