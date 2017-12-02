@@ -73,46 +73,108 @@ ul.portfolio-gallery {
   }
 }
 
-// PROJECTS
-.content-body {
-  @extend .main-grid__twelve;
+// PROJECT
+.project-content:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+// PROJECT INTRO
+.project-intro > div {
+  @extend .main-section;
+}
+.project-intro > div > div {
+  @include grid-column(12, $main-grid);
   @include grid-media($main-grid) {
     @include grid-column(8);
     @include grid-push(2, $main-grid);
   }
 }
-.project-heading {
-  background-color: blue;
+.project-intro img {
+  @include grid-column(12, $main-grid);
 }
-.project-heading > div {
+
+// PROJECT LAYOUT ONE
+.project-layout-one > div {
   @extend .main-section;
 }
-.project-content:nth-child(even) {
-  background-color: rgba(0, 255, 0, 0.1);
+.project-layout-one > div:nth-child(1) > div {
+  @include grid-column(12, $main-grid);
+  @include grid-media($main-grid) {
+    @include grid-column(8);
+    @include grid-push(2, $main-grid);
+  }
 }
-.project-content > div:first-child {
+.project-layout-one > div:nth-child(2) > div {
+  @include grid-column(12, $main-grid);
+  @include grid-media($main-grid) {
+    @include grid-column(4, $main-grid);
+  }
+}
+
+// PROJECT LAYOUT TWO
+.project-layout-two > div {
   @extend .main-section;
 }
-.content
-/*
-.project-content > .full-bleed {
-  @extend .full-bleed;
-}
-.project-content > .full-bleed div {
-  @include grid-column(12, $full-bleed);
-  @include grid-media($full-bleed) {
-    @include grid-column(3, $full-bleed);
-    @include grid-push(1, $full-bleed);
+.project-layout-two > div > div {
+  @include grid-column(12, $main-grid);
+  @include grid-media($main-grid) {
+    @include grid-column(4, $main-grid);
   }
 }
-.project-content > .full-bleed img {
-  @include grid-column(12, $full-bleed);
-  @include grid-media($full-bleed) {
-    @include grid-column(7, $full-bleed);
-    @include grid-push(1, $full-bleed);
+.project-layout-two img {
+  @include grid-column(12, $main-grid);
+}
+
+// PROJECT LAYOUT THREE
+.project-layout-three > div {
+  @extend .main-section;
+}
+.project-layout-three > div > div {
+  @include grid-column(12, $main-grid);
+  @include grid-media($main-grid) {
+    @include grid-column(8, $main-grid);
+    @include grid-push(2, $main-grid);
   }
 }
-*/
+.project-layout-three img {
+  @include grid-column(12, $main-grid);
+}
+
+// PROJECT LAYOUT FOUR
+.project-layout-four > div {
+  @extend .main-section;
+}
+.project-layout-four > div > div {
+  @include grid-column(12, $main-grid);
+  @include grid-media($main-grid) {
+    @include grid-column(4, $main-grid);
+  }
+}
+.project-layout-four img {
+  @include grid-column(12, $main-grid);
+  @include grid-media($main-grid) {
+    @include grid-column(8, $main-grid);
+  }
+}
+
+// PROJECT LAYOUT FOUR REVERSED
+.project-layout-four-reversed > div {
+  @extend .main-section;
+}
+.project-layout-four-reversed > div > div {
+  @include grid-column(12, $main-grid);
+  @include grid-media($main-grid) {
+    @include grid-column(4, $main-grid);
+    @include grid-shift(8, $main-grid);
+  }
+}
+.project-layout-four-reversed img {
+  @include grid-column(12, $main-grid);
+  @include grid-media($main-grid) {
+    @include grid-column(8, $main-grid);
+    @include grid-shift(-4, $main-grid);
+  }
+}
 
 // FOOTER
 footer {

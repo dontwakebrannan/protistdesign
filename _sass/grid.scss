@@ -33,6 +33,8 @@ $seven-grid: (
 .main-grid__eleven { @include grid-column(11, $main-grid); }
 .main-grid__twelve { @include grid-column(12, $main-grid); }
 
+.main-grid__push-two { @include grid-push(2, $main-grid); }
+
 // Full bleed
 .full-bleed { @include grid-container; }
 
