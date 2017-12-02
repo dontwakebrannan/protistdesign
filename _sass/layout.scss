@@ -6,6 +6,11 @@
   @include grid-visual(rgba(255, 0, 0, 0.1), $main-grid);
 }
 
+.full-bleed {
+  @extend .full-bleed;
+  @include grid-visual(rgba(0, 0, 255, 0.1), $full-bleed);
+}
+
 .seven-grid {
   // background-color: rgba(0, 255, 0, 0.1);
   @include grid-visual(rgba(0, 255, 0, 0.1), $seven-grid);
@@ -67,6 +72,47 @@ ul.portfolio-gallery {
     @include grid-column(4);
   }
 }
+
+// PROJECTS
+.content-body {
+  @extend .main-grid__twelve;
+  @include grid-media($main-grid) {
+    @include grid-column(8);
+    @include grid-push(2, $main-grid);
+  }
+}
+.project-heading {
+  background-color: blue;
+}
+.project-heading > div {
+  @extend .main-section;
+}
+.project-content:nth-child(even) {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+.project-content > div:first-child {
+  @extend .main-section;
+}
+.content
+/*
+.project-content > .full-bleed {
+  @extend .full-bleed;
+}
+.project-content > .full-bleed div {
+  @include grid-column(12, $full-bleed);
+  @include grid-media($full-bleed) {
+    @include grid-column(3, $full-bleed);
+    @include grid-push(1, $full-bleed);
+  }
+}
+.project-content > .full-bleed img {
+  @include grid-column(12, $full-bleed);
+  @include grid-media($full-bleed) {
+    @include grid-column(7, $full-bleed);
+    @include grid-push(1, $full-bleed);
+  }
+}
+*/
 
 // FOOTER
 footer {

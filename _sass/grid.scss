@@ -6,6 +6,12 @@ $main-grid: (
   media: 1000px,
 );
 
+$full-bleed: (
+  columns: 12,
+  gutter: 0px,
+  media: 1000px,
+);
+
 $seven-grid: (
   columns: 7,
   gutter: 0,
@@ -26,6 +32,22 @@ $seven-grid: (
 .main-grid__ten { @include grid-column(10, $main-grid); }
 .main-grid__eleven { @include grid-column(11, $main-grid); }
 .main-grid__twelve { @include grid-column(12, $main-grid); }
+
+// Full bleed
+.full-bleed { @include grid-container; }
+
+.full-bleed__one { @include grid-column(1, $full-bleed); }
+.full-bleed__two { @include grid-column(2, $full-bleed); }
+.full-bleed__three { @include grid-column(3, $full-bleed); }
+.full-bleed__four { @include grid-column(4, $full-bleed); }
+.full-bleed__five { @include grid-column(5, $full-bleed); }
+.full-bleed__six { @include grid-column(6, $full-bleed); }
+.full-bleed__seven { @include grid-column(7, $full-bleed); }
+.full-bleed__eight { @include grid-column(8, $full-bleed); }
+.full-bleed__nine { @include grid-column(9, $full-bleed); }
+.full-bleed__ten { @include grid-column(10, $full-bleed); }
+.full-bleed__eleven { @include grid-column(11, $full-bleed); }
+.full-bleed__twelve { @include grid-column(12, $full-bleed); }
 
 // Seven grid
 .seven-grid__one { @include grid-column(1, $seven-grid); }
