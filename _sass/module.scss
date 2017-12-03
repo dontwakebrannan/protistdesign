@@ -10,16 +10,16 @@ nav[role=navigation] ul {
 }
 
 // HEADER
-header[role=banner] {
+.main-banner {
   position: relative;
   height: 100vh;
   overflow: hidden;
   background-color: $cream;
 }
-header[role=banner] > div {
+.main-banner > div {
   @include grid-container;
 }
-header[role=banner] .logo {
+.main-banner .logo {
   @include grid-column(8, $full-bleed);
   @include grid-push(2, $full-bleed);
   @include grid-media($full-bleed) {
@@ -28,12 +28,11 @@ header[role=banner] .logo {
     @include grid-column(3, $full-bleed);
     @include grid-push(1, $full-bleed);
   }
-
   img {
     max-width: 350px;
   }
 }
-header[role=banner] .subtitle {
+.main-banner .subtitle {
   @include grid-column(10, $full-bleed);
   @include grid-push(1, $full-bleed);
   text-align: center;
@@ -81,4 +80,9 @@ ul.portfolio-gallery {
   list-style: none;
 }
 .portfolio-gallery li {
+}
+
+// FOOTER
+footer {
+  background-color: $black;
 }
