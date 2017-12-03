@@ -3,13 +3,13 @@ $main-gutter: 40px;
 $main-grid: (
   columns: 12,
   gutter: $main-gutter,
-  media: 1000px,
+  media: 768px,
 );
 
 $full-bleed: (
   columns: 12,
   gutter: 0px,
-  media: 1000px,
+  media: 768px,
 );
 
 $seven-grid: (

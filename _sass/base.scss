@@ -1,13 +1,25 @@
 @import "neat";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300,100);
 
-$cream: #F3F1E2;
-$yellow: #EFE145;
 $black: #323230;
 $purple: #B590A8;
+$light-purple: #D5B3C8;
+$yellow: #EFE144;
+$light-yellow: #FBF6C9;
+$bg: #F3F1E2;
+$cream: #F3F1E2;
 
 $light-grey: #FBFAFA;
+
+$sans-serif: "Lato", sans-serif;
+$serif: "Chronicle Display A", "Chronicle Display B", serif;
 
 img {
   display: block;
   width: 100%;
+}
+
+body {
+  font-family: $sans-serif;
+  font-weight: 300;
 }

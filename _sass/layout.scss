@@ -3,34 +3,51 @@
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-  @include grid-visual(rgba(255, 0, 0, 0.1), $main-grid);
+  // @include grid-visual(rgba(255, 0, 0, 0.1), $main-grid);
 }
 
 .full-bleed {
   @extend .full-bleed;
-  @include grid-visual(rgba(0, 0, 255, 0.1), $full-bleed);
+  // @include grid-visual(rgba(0, 0, 255, 0.1), $full-bleed);
 }
 
 .seven-grid {
   // background-color: rgba(0, 255, 0, 0.1);
-  @include grid-visual(rgba(0, 255, 0, 0.1), $seven-grid);
+  // @include grid-visual(rgba(0, 255, 0, 0.1), $seven-grid);
 }
 
 // ABOUT SECTION
 .about {
-  @extend .main-section;
+  // background-color: green;
 }
 .about > div {
-  @extend .main-grid__twelve;
+  @include grid-container;
+}
+.about div:nth-child(1) > div {
+  @include grid-column(12, $main-grid);
   @include grid-media($main-grid) {
-    @include grid-column(6);
+    @include grid-column(4, $full-bleed);
+    @include grid-push(6, $full-bleed);
+  }
+}
+.about div:nth-child(2) > div {
+  @include grid-column(12, $main-grid);
+  @include grid-media($main-grid) {
+    @include grid-column(4, $full-bleed);
+    @include grid-push(2, $full-bleed);
   }
 }
 
 // PROCESS SECTION
 .process {}
-.step-one, .step-two, .step-three {
+.step > div {
   @extend .main-section;
+}
+.step.one {
+  background-color: $light-purple;
+}
+.step.two, .step.three {
+  background-color: $cream;
 }
 .process-body {
   @extend .main-grid__twelve;

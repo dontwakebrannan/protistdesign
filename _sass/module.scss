@@ -25,8 +25,12 @@ header[role=banner] .logo {
   @include grid-media($full-bleed) {
     position: absolute;
     bottom: $main-gutter;
-    @include grid-column(4, $full-bleed);
+    @include grid-column(3, $full-bleed);
     @include grid-push(1, $full-bleed);
+  }
+
+  img {
+    max-width: 350px;
   }
 }
 header[role=banner] .subtitle {
@@ -40,7 +44,39 @@ header[role=banner] .subtitle {
   }
 }
 
-// Portfolio gallery
+// ABOUT
+.about { position: relative; }
+.about:before {  // Vertical line
+  @include grid-media($main-grid) {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 1px;
+    border-right: 1px solid $yellow;
+    z-index: -1;
+  }
+}
+.about .what {
+  @include grid-media($main-grid) {
+    text-align: right;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+// PROCESS
+.step-one, .step-three {
+  background-color: blue;
+}
+.step-two {
+  background-color: yellow;
+}
+
+// PORTFOLIO GALLERY
 ul.portfolio-gallery {
   list-style: none;
 }
