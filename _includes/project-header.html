@@ -1,7 +1,11 @@
 <header role="banner" class="project-banner">
-  {% if page.back %}
-    <span class="back-btn"><a href="{{ site.github.url }}{{ page.back }}">Back</a></span>
-  {% endif %}
-  <h1 class="logo"><a href="/">Protist</a></h1>
-  {% include navigation.html %}
+  <div>
+    {% if page.back %}
+      <span class="back-btn"><a href="{{ site.github.url }}{{ page.back }}">Back</a></span>
+    {% endif %}
+    <div class="logo">
+      <h1><a href="/"><img src="/images/protist-logo.svg" alt="Protist Design" /></a></h1>
+    </div>
+    {% include navigation.html %}
+  </div>
 </header>

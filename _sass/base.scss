@@ -8,18 +8,30 @@ $yellow: #EFE144;
 $light-yellow: #FBF6C9;
 $bg: #F3F1E2;
 $cream: #F3F1E2;
+$red: #EA5457;
 
 $light-grey: #FBFAFA;
 
 $sans-serif: "Lato", sans-serif;
 $serif: "Chronicle Display A", "Chronicle Display B", serif;
 
-img {
-  display: block;
-  width: 100%;
-}
-
 body {
   font-family: $sans-serif;
   font-weight: 300;
+  font-style: normal;
+  line-height: 1.6;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+
+  &:hover {}
+  &:visited {}
+}
+
+img {
+  display: block;
+  width: 100%;
 }
