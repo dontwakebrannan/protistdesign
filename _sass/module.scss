@@ -1,4 +1,33 @@
-
+// HEADER
+header[role=banner] {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $cream;
+}
+header[role=banner] > div {
+  @include grid-container;
+}
+header[role=banner] .logo {
+  @include grid-column(8, $full-bleed);
+  @include grid-push(2, $full-bleed);
+  @include grid-media($full-bleed) {
+    position: absolute;
+    bottom: $main-gutter;
+    @include grid-column(4, $full-bleed);
+    @include grid-push(1, $full-bleed);
+  }
+}
+header[role=banner] .subtitle {
+  @include grid-column(10, $full-bleed);
+  @include grid-push(1, $full-bleed);
+  text-align: center;
+  @include grid-media($full-bleed) {
+    @include grid-column(4, $full-bleed);
+    @include grid-push(7, $full-bleed);
+    text-align: left; 
+  }
+}
 
 // Portfolio gallery
 ul.portfolio-gallery {

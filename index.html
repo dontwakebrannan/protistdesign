@@ -3,12 +3,15 @@ layout: default
 ---
 
 <header role="banner">
-  {% if page.back %}
-    <span class="back-btn"><a href="{{ site.github.url }}{{ page.back }}">Back</a></span>
-  {% endif %}
-  <h1 class="logo"><a href="/">Protist</a></h1>
-  <h2>A Portland design studio with a strong sense of craft and wonder.</h2>
-  {% include navigation.html %}
+  <div>
+    {% include navigation.html %}
+    <div class="logo">
+      <h1><a href="/"><img src="/images/protist-logo.svg" alt="Protist Design" /></a></h1>
+    </div>
+    <div class="subtitle">
+      <h2>A Portland design studio with a strong sense of craft and wonder.</h2>
+    </div>
+  </div>
 </header>
 
 <main>
