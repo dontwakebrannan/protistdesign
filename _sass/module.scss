@@ -1,3 +1,14 @@
+// NAVIGATION
+nav[role=navigation] ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  @include grid-media($full-bleed) {
+    justify-content: flex-end;
+  }
+}
+
 // HEADER
 header[role=banner] {
   position: relative;
@@ -25,7 +36,7 @@ header[role=banner] .subtitle {
   @include grid-media($full-bleed) {
     @include grid-column(4, $full-bleed);
     @include grid-push(7, $full-bleed);
-    text-align: left; 
+    text-align: left;
   }
 }
 
