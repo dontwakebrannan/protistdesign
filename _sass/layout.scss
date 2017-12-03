@@ -77,6 +77,9 @@ ul.portfolio-gallery {
 .project-content:nth-child(even) {
   background-color: #f9f9f9;
 }
+.project-content > div {
+  @extend .main-section;
+}
 
 // PROJECT INTRO
 .project-intro > div {

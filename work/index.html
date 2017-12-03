@@ -2,6 +2,16 @@
 layout: default
 ---
 
+<main>
+<header role="banner">
+  {% if page.back %}
+    <span class="back-btn"><a href="{{ site.github.url }}{{ page.back }}">Back</a></span>
+  {% endif %}
+  <h1 class="logo"><a href="/">Protist</a></h1>
+  <h2>A Portland design studio with a strong sense of craft and wonder.</h2>
+  {% include navigation.html %}
+</header>
+
 <section class="work">
   <div>
     <header class="page-heading">
@@ -48,3 +58,4 @@ layout: default
     <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
   </ul>
 </section>
+</main>
