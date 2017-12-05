@@ -15,9 +15,18 @@ nav[role=navigation] ul {
 .main-banner {
   position: relative;
   height: 100vh;
+  min-height: 500px;
   overflow: hidden;
   &.learn-banner { background-color: $cream; }
   &.work-banner { background-color: $purple; }
+}
+.learn-banner {
+  background-image: url('/images/person-boy-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: 90% 100%;
+  @include grid-media($main-grid) {
+    background-image: none;
+  }
 }
 .main-banner > div {
   @include grid-container;
@@ -30,6 +39,10 @@ nav[role=navigation] ul {
     bottom: $main-gutter;
     @include grid-column(3, $full-bleed);
     @include grid-push(1, $full-bleed);
+  }
+  h1 {
+    margin-top: $main-gutter;
+    margin-bottom: $main-gutter;
   }
   img {
     max-width: 350px;
@@ -46,8 +59,13 @@ nav[role=navigation] ul {
     @include grid-push(7, $full-bleed);
     text-align: left;
   }
+  h2 {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: $sans-serif;
+    line-height: 1.6;
+  }
 }
-
 .project-banner {
   position: relative;
   overflow: hidden;
@@ -62,9 +80,48 @@ nav[role=navigation] ul {
     max-width: 300px;
   }
 }
+// LEARN BANNER DECORATION
+header[role=banner].learn-banner {
+  position: relative;
+  background-color: $cream;
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform-style: preserve-3d;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &:after {
+    transform: translateZ(-1px) scale(2);
+    background-image: url('../images/symbols.svg');
+  }
+  &:before {
+    transform: translateZ(-2px) scale(3);
+    background-image: url('../images/big-letters.svg');
+  }
+  .surprise {
+    position: absolute;
+    bottom: -100vh;
+    left: 0;
+    right: 0;
+    height: 90vh;
+    background-color: #fff;
+  }
+}
 
 // ABOUT
-.about { position: relative; }
+.about {
+  position: relative;
+}
 .about:before {  // Vertical line
   @include grid-media($main-grid) {
     content: '';
@@ -86,15 +143,56 @@ nav[role=navigation] ul {
     list-style: none;
   }
 }
+.about h2 {
+  margin-bottom: $main-gutter / 2;
+  @include grid-media($main-grid) {
+    margin-bottom: $main-gutter;
+    font-size: 100px;
+  }
+}
 
 // PROCESS
-.step-one, .step-three {
-  background-color: blue;
+.process h2,
+.process h3,
+.process h4 {
+  text-align: center;
 }
-.step-two {
-  background-color: yellow;
+.step.one {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  @include grid-media($main-grid) {
+    padding-bottom: 300px;
+    background-image: url('../images/process-illustrations.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100%;
+  }
+  &:before {
+    position: absolute;
+    top: -50%;
+    bottom: -50%;
+    left: 50%;
+    content: '';
+    display: block;
+    width: 400px;
+    margin-left: -200px;
+    z-index: -1;
+    background-color: $light-yellow;
+    transform: rotate(-45deg);
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    background-color: $light-purple;
+  }
 }
-
 // PORTFOLIO GALLERY
 ul.portfolio-gallery {
   list-style: none;

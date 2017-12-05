@@ -1,5 +1,5 @@
 @import "neat";
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300,100);
+@import url(https://fonts.googleapis.com/css?family=GFS+Didot|Lato:400,400i,700|Lora);
 
 $black: #323230;
 $purple: #B590A8;
@@ -13,11 +13,13 @@ $red: #EA5457;
 $light-grey: #FBFAFA;
 
 $sans-serif: "Lato", sans-serif;
-$serif: "Chronicle Display A", "Chronicle Display B", serif;
+$serif: "Didot","Lora", serif;
+
+$main-gutter: 40px;
 
 body {
   font-family: $sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.6;
   color: $black;
@@ -34,4 +36,26 @@ a {
 img {
   display: block;
   width: 100%;
+}
+
+h2 {
+  margin-top: $main-gutter;
+  margin-bottom: $main-gutter;
+  font-family: $serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 0.7em;
+}
+
+h3 {
+  font-size: 14px;
+  line-height: 1.6em;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
 }
