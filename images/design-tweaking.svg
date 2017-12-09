@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="302px" height="302px" viewBox="0 0 302 302" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="302" height="302"></rect>
+        <rect id="path-3" x="100.221239" y="-50.7787611" width="252.557522" height="252.557522"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="252.557522" height="252.557522" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="132.292035" y="-30.7345133" width="201.778761" height="201.778761"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="201.778761" height="201.778761" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Layouts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Learn-Copy" transform="translate(-208.000000, -4726.000000)">
+            <g id="Group-11" transform="translate(208.000000, 4726.000000)">
+                <g id="Group">
+                    <g id="Rectangle-7-Copy-+-Rectangle-7-Mask">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#FBF6C9" xlink:href="#path-1"></use>
+                        <g id="Rectangle-7-Copy" mask="url(#mask-2)" stroke-width="4" stroke="#EFE144" fill="#EFE144">
+                            <use mask="url(#mask-4)" xlink:href="#path-3"></use>
+                        </g>
+                        <g id="Rectangle-7" mask="url(#mask-2)" stroke-width="4" stroke="#323230" stroke-dasharray="8">
+                            <use mask="url(#mask-6)" xlink:href="#path-5"></use>
+                        </g>
+                    </g>
+                    <g id="Triangle-1-+-Rectangle-9" transform="translate(77.500000, 222.500000) rotate(-315.000000) translate(-77.500000, -222.500000) translate(60.000000, 191.000000)" fill="#323230">
+                        <polygon id="Triangle-1" points="17.5670498 0.148584906 35 50.718689 17.3911314 41.3270982 0.134099617 50.718689"></polygon>
+                        <rect id="Rectangle-9" x="13.2088123" y="38.437378" width="9.44284802" height="24.562622"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="475px" height="64px" viewBox="0 0 475 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Layouts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Learn-Copy" transform="translate(-463.000000, -3202.000000)">
+            <g id="Group-10" transform="translate(465.000000, 3206.000000)">
+                <path d="M181.5,32 L0.455806494,32" id="Line" stroke="#323230" stroke-width="4" stroke-linecap="square"></path>
+                <path d="M470.5,32 L289.455806,32" id="Line-Copy" stroke="#323230" stroke-width="4" stroke-linecap="square"></path>
+                <text id="01" font-family="AzoSans-Regular, Azo Sans" font-size="21" font-weight="normal" fill="#323230">
+                    <tspan x="222.5" y="44">01</tspan>
+                </text>
+                <polygon id="Triangle-4-Copy" stroke="#323230" stroke-width="4" points="235 0 275.5 57.5526316 194.5 57.5526316"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

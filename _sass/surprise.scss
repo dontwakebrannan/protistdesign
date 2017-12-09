@@ -1,0 +1,245 @@
+/*
+.surprise {
+  position: absolute;
+  bottom: -100vh;
+  left: 0;
+  right: 0;
+  height: 80vh;
+  background-color: #fff;
+}
+*/
+
+///////////////////////////////////
+// BLOCK ANIMATIONS
+///////////////////////////////////
+
+.surprise {
+  display: none;
+  @include grid-media($main-grid) {
+    display: block;
+  }
+}
+.fun {
+	display: flex;
+	align-items: row;
+	flex-wrap: wrap;
+}
+
+.ani-block {
+	position: relative;
+  width: 33.333333333%;
+  padding-bottom: 33.333333333%;
+	overflow: hidden;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+  @include grid-media($main-grid) {
+    width: 14.285714286%;
+    padding-bottom: 14.285714286%;
+  }
+}
+
+@keyframes rotate-no-transition {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(90deg);
+	}
+	75% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(270deg);
+	}
+}
+
+// TRIANGLE LIGHT
+.triangle-light-top-right, .triangle-light-top-left {
+	background-image: url('../images/shapes/triangle-light.svg');
+}
+
+// TRIANGLE LIGHT
+.triangle-light-top-left {
+	transform: scaleX(-1);
+}
+
+// TRIANGLE OUTLINE
+.triangle-outline-top-right, .triangle-outline-top-left {
+	background-image: url('../images/shapes/triangle-outline.svg');
+}
+
+.triangle-outline-top-left {
+	transform: scaleX(-1);
+}
+
+// TRIANGLES 4
+.triangles-4 {
+	background-image: url('../images/shapes/triangles-4.svg');
+	// animation: rotate-no-transition 12s step-end infinite;
+}
+
+// TRIANGLES AND X
+.triangles-and-x {
+	background-image: url('../images/shapes/triangles-and-x.svg');
+}
+
+// TRIANGLES OUTLINE AND SOLID
+.triangle-outline-and-solid {
+	background-image: url('../images/shapes/triangle-outline-and-solid.svg');
+}
+
+// TRIANGLES 3-1
+.triangles-3-1 {
+	background-image: url('../images/shapes/triangles-3-1.svg');
+}
+
+// TRIANGLES LIGHT BIG SMALL
+.triangles-light-big-small {
+	background-image: url('../images/shapes/triangle-light-big-small.svg');
+}
+
+// TRIANGLES LIGHT BIG SMALL 2
+.triangles-light-big-small-2 {
+	background-image: url('../images/shapes/triangles-light-big-small-2.svg');
+}
+
+// TRIANGLE OUTLINE SMALL
+.triangle-outline-small {
+	background-image: url('../images/shapes/triangle-outline-small.svg');
+	background-position: top right;
+	background-size: 50% 50%;
+}
+
+// CIRCLE IN SQUARE
+.circle-in-square {
+	background-image: url('../images/shapes/circle-in-square.svg');
+}
+
+// CIRCLE HAVLES
+@keyframes circle-spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.circle-halves {
+	background-image: url('../images/shapes/circle-halves.svg');
+	// animation: circle-spin 8s linear infinite;
+}
+
+// TWO CIRCLES ANI
+@keyframes two-circles-circle-1 {
+	0%	{
+		top: 0%;
+		left: 0%;
+	}
+	25% {
+		top: 50%;
+		left: 0%;
+	}
+	50% {
+		top: 50%;
+		left: 50%;
+	}
+	75% {
+		top: 0%;
+		left: 50%;
+	}
+	100% {
+		top: 0%;
+		left: 0%;
+	}
+}
+
+@keyframes two-circles-circle-2 {
+	0% {
+		top: 50%;
+		left: 50%;
+	}
+	25% {
+		top: 0%;
+		left: 50%;
+	}
+	50% {
+		top: 0%;
+		left: 0%;
+	}
+	75% {
+		top: 50%;
+		left: 0%;
+	}
+	100% {
+		top: 50%;
+		left: 50%;
+	}
+}
+.two-circles {
+	div {
+		position: absolute;
+		background-image: url('../images/shapes/circle-small.svg');
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		&.circle-1 {
+			top: 0%;
+			left: 0%;
+			width: 50%;
+			height: 50%;
+			animation: two-circles-circle-1 8s ease-out infinite;
+		}
+		&.circle-2 {
+			top: 50%;
+			left: 50%;
+			width: 50%;
+			height: 50%;
+			animation: two-circles-circle-2 8s ease-out infinite;
+		}
+	}
+}
+
+// WAVES
+@keyframes waves {
+	0% {
+		left: 0%;
+	}
+	100% {
+		left: -100%;
+	}
+}
+.waves {
+	overflow: hidden;
+	.wave {
+		position: absolute;
+		width: 200%;
+		height: 50%;
+		background-image: url('../images/shapes/waves.svg');
+		background-position: 0 0;
+		background-repeat: repeat-x;
+		background-size: contain;
+		animation: waves 4s linear infinite;
+	}
+}
+
+// WAVES 2
+@keyframes waves-2 {
+	0% {
+		left: -100%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+.waves-2 {
+	overflow: hidden;
+	.wave {
+		position: absolute;
+		width: 200%;
+		height: 100%;
+		background-image: url('../images/shapes/waves-2.svg');
+		background-position: 0 0;
+		background-repeat: repeat-x;
+		background-size: contain;
+		animation: waves-2 4s linear infinite;
+	}
+}

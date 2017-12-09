@@ -1,8 +1,8 @@
 ---
 layout: default
 id: learn
+parallax: true
 ---
-
 <header role="banner" class="main-banner learn-banner">
   <div>
     {% include navigation.html %}
@@ -12,10 +12,9 @@ id: learn
     <div class="subtitle">
       <h2>A Portland design studio with a strong sense of craft and wonder.</h2>
     </div>
-    <div class="surprise">
-    </div>
   </div>
 </header>
+{% include surprise.html %}
 
 <main>
 <section class="about">
@@ -49,7 +48,7 @@ id: learn
         	<h2>Pride in process</h2>
         	<h3>A quick overview of our creative process</h3>
         </header>
-    		<div class="step">01</div>
+    		<div class="step-number one">01</div>
     		<h4>Discovery</h4>
     		<p>At the beginning of every project, our objective is to obtain a concrete understanding of what is most effective for you and your audience. Through audience research, user personas, and a competitive analyses, we target every pixel toward making your project a success.</p>
       </div>
@@ -69,19 +68,19 @@ id: learn
 	<section class="step two">
     <div>
       <div  class="process-body">
-    		<div class="step">02</div>
+    		<div class="step-number two">02</div>
     		<h4>Design &amp; Implementation</h4>
     		<p>With a strong understanding of what it takes to make your project uniquely successful, we begin executing on that strategy. Depending on the needs of the project this may involve UI/UX prototyping, design, and responsive development.</p>
       </div>
   		<div class="gallery">
   			<div class="item">
-  				<!-- <img src="images/design-tweaking.svg" alt="" /> -->
+  				<img src="images/design-tweaking.svg" alt="" />
   			</div>
   			<div class="item">
-  				<!-- <img src="images/design-toggles.svg" alt="" /> -->
+  				<img src="images/design-toggles.svg" alt="" />
   			</div>
   			<div class="item">
-  				<!-- <img src="images/design-lettering.svg" alt="" /> -->
+  				<img src="images/design-lettering.svg" alt="" />
   			</div>
   		</div>
    </div>
@@ -90,7 +89,7 @@ id: learn
 	<section class="step three">
     <div>
     <div class="process-body">
-  		<div class="step">03</div>
+  		<div class="step-number three">03</div>
     		<h4>Closure</h4>
     		<p>At the end of each project, we want to ensure that you're happy with the final results, and also discuss what worked and what could be improved. This helps to inform both next steps for the client as well us help us continually improve the quality of our work.</p>
       </div>

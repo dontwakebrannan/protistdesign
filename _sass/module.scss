@@ -6,26 +6,59 @@ nav[role=navigation] ul {
   list-style: none;
   @include grid-media($full-bleed) {
     justify-content: flex-end;
+    margin-right: $main-gutter;
   }
+}
+nav[role=navigation] li {
+  padding: $main-gutter / 2;
+}
+nav[role=navigation] a {
+  letter-spacing: 1.2px;
 }
 .learn-banner .active a { color: $red; }
 .work-banner .active a { color: $yellow; }
 
 // HEADER
+// parallax
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+// end parallax
 .main-banner {
   position: relative;
   height: 100vh;
   min-height: 500px;
   overflow: hidden;
-  &.learn-banner { background-color: $cream; }
-  &.work-banner { background-color: $purple; }
+  max-height: 600px;
+  // &.learn-banner { background-color: $cream; }
+  // &.work-banner { background-color: $purple; }
+  @include grid-media($main-grid) {
+    max-height: none;
+  }
 }
 .learn-banner {
   background-image: url('/images/person-boy-mobile.svg');
   background-repeat: no-repeat;
   background-position: 90% 100%;
+  background-color: $cream;
   @include grid-media($main-grid) {
     background-image: none;
+    background-color: transparent;
+  }
+}
+.work-banner {
+  background-color: $purple;
+  @include grid-media($main-grid) {
+    background-image: none;
+    background-color: transparent;
   }
 }
 .main-banner > div {
@@ -51,6 +84,7 @@ nav[role=navigation] ul {
   }
 }
 .main-banner .subtitle {
+  z-index: 1;
   @include grid-column(10, $full-bleed);
   @include grid-push(1, $full-bleed);
   text-align: center;
@@ -80,46 +114,45 @@ nav[role=navigation] ul {
     max-width: 300px;
   }
 }
-// LEARN BANNER DECORATION
 header[role=banner].learn-banner {
-  background-color: $cream;
-  perspective: 1px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  transform-style: preserve-3d;
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  &:after {
-    transform: translateZ(-1px) scale(2);
-    background-image: url('../images/symbols.svg');
-  }
-  &:before {
-    transform: translateZ(-2px) scale(3);
-    background-image: url('../images/big-letters.svg');
-  }
-  .surprise {
-    position: absolute;
-    bottom: -100vh;
-    left: 0;
-    right: 0;
-    height: 90vh;
-    background-color: #fff;
+  @include grid-media($main-grid) {
+    position: relative;
+    min-height: 100vh;
+    // background-color: $cream;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &:after {
+      transform: translateZ(-1px) scale(2);
+      background-image: url('../images/symbols.svg');
+    }
+    &:before {
+      transform: translateZ(-2px) scale(3);
+      background-image: url('../images/big-letters.svg');
+      background-color: $cream;
+    }
   }
 }
 
 // ABOUT
 .about {
   position: relative;
+  @include grid-media($main-grid) {
+    background-image: url('/images/person-boy.svg');
+    background-repeat: no-repeat;
+    background-size: 300px auto;
+    background-position: 90% 100%;
+  }
 }
 .about:before {  // Vertical line
   @include grid-media($main-grid) {
@@ -191,6 +224,29 @@ header[role=banner].learn-banner {
     z-index: -2;
     background-color: $light-purple;
   }
+}
+.step-number {
+  height: 64px;
+  text-indent: -10000px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  &.one { background-image: url('../images/step-one.svg'); }
+  &.two { background-image: url('../images/step-two.svg'); }
+  &.three { background-image: url('../images/step-three.svg'); }
+}
+.step.one .one {
+  margin-top: $main-gutter;
+}
+.gallery {
+  display: none;
+  @include grid-container;
+  @include grid-media($main-grid) {
+    display: block;
+  }
+}
+.gallery > div {
+  @include grid-column(4, $main-grid);
 }
 // PORTFOLIO GALLERY
 ul.portfolio-gallery {
