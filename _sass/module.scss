@@ -17,6 +17,9 @@ nav[role=navigation] a {
 }
 .learn-banner .active a { color: $red; }
 .work-banner .active a { color: $yellow; }
+.project-banner nav[role=navigation] a {
+  color: $cream;
+}
 
 // HEADER
 // parallax
@@ -103,13 +106,14 @@ body {
 .project-banner {
   position: relative;
   overflow: hidden;
-  background-color: yellow;
+  background-color: $black;
 }
 .project-banner > div {
   @include grid-container;
 }
 .project-banner .logo {
-  @include grid-column(4, $full-bleed);
+  @include grid-column(4, $main-grid);
+
   img {
     max-width: 300px;
   }
@@ -117,7 +121,7 @@ body {
 header[role=banner].learn-banner {
   @include grid-media($main-grid) {
     position: relative;
-    min-height: 100vh;
+    // min-height: 100vh;
     // background-color: $cream;
     &:before, &:after {
       content: '';
@@ -143,7 +147,41 @@ header[role=banner].learn-banner {
     }
   }
 }
-
+header[role=banner].work-banner {
+  @include grid-media($main-grid) {
+    position: relative;
+    // min-height: 90vh;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      z-index: -1;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateZ(-1px) scale(2);
+      background-image: url('../images/work-shapes.svg');
+      background-position: bottom;
+      background-size: contain;
+    }
+    &:before {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateZ(-2px) scale(3);
+      background-image: url('../images/work-cover-bg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: $purple;
+    }
+  }
+}
 // ABOUT
 .about {
   position: relative;
@@ -238,6 +276,9 @@ header[role=banner].learn-banner {
 .step.one .one {
   margin-top: $main-gutter;
 }
+.step.two > div {
+  padding-bottom: 0;
+}
 .gallery {
   display: none;
   @include grid-container;
@@ -248,11 +289,139 @@ header[role=banner].learn-banner {
 .gallery > div {
   @include grid-column(4, $main-grid);
 }
+// WORK
+.work h2, .work h3, .work h4 {
+  text-align: center;
+}
+.work h3 {
+  color: $purple;
+}
+.work h4:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 74px;
+  margin-top: $main-gutter;
+  margin-bottom: $main-gutter;
+  background-image: url('../images/briefcase.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.work h5 {
+  margin-bottom: $main-gutter / 4;
+}
+// PORTFOLIO HIGHLIGHTS
+.portfolio-highlights { }
+.categories span {
+  margin-right: 4px;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: $black;
+  background-color: #eee;
+}
+.portfolio-highlights .highlight {
+  position: relative;
+  margin-top: $main-gutter * 2;
+  margin-bottom: $main-gutter * 2;
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    right: 0;
+    bottom: 0;
+    width: 310px;
+    height: 310px;
+    background-image: url('../images/project-go-triangle.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+}
+a.project-go {
+  position: absolute;
+  bottom: $main-gutter / 2;
+  right: $main-gutter / 2;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  text-indent: -10000px;
+  overflow: hidden;
+  background-color: $yellow;
+  background-image: url('../images/project-go-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px auto;
+  border-bottom: 0px solid darken($yellow, 10%);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: lighten($yellow, 10%);
+    border-bottom: 4px solid darken($yellow, 10%);
+    box-shadow: 6px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  &:active {
+    background-color: white;
+    border-bottom: 0px solid darken($yellow, 10%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  }
+}
+
 // PORTFOLIO GALLERY
 ul.portfolio-gallery {
   list-style: none;
 }
 .portfolio-gallery li {
+}
+
+// PROJECT INTRO
+.project-intro {
+  color: $cream;
+  background-color: $black;
+}
+.project-intro h2,
+.project-layout-three h2 {
+  font-size: 48px;
+  font-weight: 400;
+  font-family: $sans-serif;
+  letter-spacing: 2px;
+  line-height: 1em;
+}
+.project-intro p,
+.project-layout-three p {
+  margin-bottom: $main-gutter * 2;
+}
+.project-intro a {
+  border-bottom: 1px solid $purple;
+  color: $purple;
+  &:hover {
+    border-bottom: 1px solid lighten($purple, 15%);
+    color: lighten($purple, 15%);
+  }
+}
+.rapt-media .project-layout-one {
+  padding-bottom: 340px;
+  background-image: url('../images/rapt-media/composer-media-library.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 480px auto;
+  @include grid-media($main-grid) {
+    padding-bottom: 180px;
+  }
+  @include grid-media($desktops) {
+    padding-bottom: 260px;
+    background-size: 650px;
+  }
+}
+.project-layout-one > div:nth-child(1) {
+  // margin-bottom: $main-gutter * 2;
+}
+.project-layout-two p {
+  margin-bottom: $main-gutter * 2;
+}
+.project-layout-two img {
+  box-shadow: 0px 0px 18px rgba(0,0,0,0.2);
 }
 
 // FOOTER

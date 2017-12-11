@@ -108,8 +108,8 @@ ul.portfolio-gallery {
 .project-intro > div > div {
   @include grid-column(12, $main-grid);
   @include grid-media($main-grid) {
-    @include grid-column(8);
-    @include grid-push(2, $main-grid);
+    @include grid-column(10);
+    @include grid-push(1, $main-grid);
   }
 }
 .project-intro img {
@@ -119,6 +119,7 @@ ul.portfolio-gallery {
 // PROJECT LAYOUT ONE
 .project-layout-one > div {
   @extend .main-section;
+  padding-bottom: 0;
 }
 .project-layout-one > div:nth-child(1) > div {
   @include grid-column(12, $main-grid);
@@ -130,7 +131,7 @@ ul.portfolio-gallery {
 .project-layout-one > div:nth-child(2) > div {
   @include grid-column(12, $main-grid);
   @include grid-media($main-grid) {
-    @include grid-column(4, $main-grid);
+    @include grid-column(5, $main-grid);
   }
 }
 
@@ -141,7 +142,7 @@ ul.portfolio-gallery {
 .project-layout-two > div > div {
   @include grid-column(12, $main-grid);
   @include grid-media($main-grid) {
-    @include grid-column(4, $main-grid);
+    @include grid-column(5, $main-grid);
   }
 }
 .project-layout-two img {

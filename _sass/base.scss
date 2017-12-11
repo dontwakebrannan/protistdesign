@@ -1,7 +1,7 @@
 @import "neat";
-@import url(https://fonts.googleapis.com/css?family=GFS+Didot|Lato:400,400i,700|Lora);
+@import url(https://fonts.googleapis.com/css?family=GFS+Didot|Lato:300,400,400i,700,900|Lora);
 
-$black: #323230;
+$black: #29292A;
 $purple: #B590A8;
 $light-purple: #D5B3C8;
 $yellow: #EFE144;
@@ -21,21 +21,51 @@ body {
   font-family: $sans-serif;
   font-weight: 400;
   font-style: normal;
-  line-height: 1.6;
+  line-height: 1.8;
   color: $black;
-}
-
-a {
-  text-decoration: none;
-  color: $black;
-
-  &:hover {}
-  &:visited {}
 }
 
 img {
   display: block;
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  transition: color 0.1s ease-in-out;
+  &:hover {
+    color: $purple;
+  }
+  &:visited {}
+}
+
+p a {
+  border-bottom: 1px solid lighten($red, 25%);
+  color: $red;
+  &:hover {
+    color: lighten($red, 15%);
+  }
+}
+
+p {
+  font-size: 17px;
+  &.larger {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  &.smaller {
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
+
+h1.small {
+  margin-top: 0;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1.8px;
 }
 
 h2 {
@@ -45,6 +75,14 @@ h2 {
   font-weight: 700;
   font-size: 70px;
   line-height: 0.7em;
+}
+
+h2.caps {
+  font-family: $sans-serif;
+  font-weight: 900;
+  font-size: 55px;
+  line-height: 0.7em;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -57,5 +95,25 @@ h3 {
 h4 {
   font-size: 18px;
   letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin-top: $main-gutter / 2;
+  margin-bottom: $main-gutter / 2;
+  font-size: 29px;
+  letter-spacing: 1.4px;
+  line-height: 1em;
+}
+
+h6 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+i {
+  font-size: 10px;
+  font-style: normal;
   text-transform: uppercase;
 }

@@ -15,6 +15,14 @@ $seven-grid: (
   gutter: 0,
 );
 
+$desktops: (
+  media: 1000px,
+);
+
+$large-desktops: (
+  media: 1400px,
+);
+
 // Main Grid
 .main-grid { @include grid-container; }
 
