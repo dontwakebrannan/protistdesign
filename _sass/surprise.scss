@@ -19,6 +19,9 @@
     display: block;
   }
 }
+.surprise-footer {
+  background-color: $cream;
+}
 .fun {
 	display: flex;
 	align-items: row;
@@ -116,7 +119,7 @@
 	background-image: url('../images/shapes/circle-in-square.svg');
 }
 
-// CIRCLE HAVLES
+// CIRCLE HALVES
 @keyframes circle-spin {
 	100% {
 		transform: rotate(360deg);
@@ -242,4 +245,76 @@
 		background-size: contain;
 		animation: waves-2 4s linear infinite;
 	}
+}
+
+// VERT ZIG ZAGS
+.vert-zig-zags {
+  background-image: url('../images/shapes/vert-zig-zags.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// SMALL WHITE TRIANGLE BOTTOM LEFT
+.small-white-triangle-bottom-left {
+  background-image: url('../images/shapes/small-white-triangle-bottom-left.svg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+// TRIANGLE LIGHT TOP LEFT
+.triangle-light-top-left {
+  background-image: url('../images/shapes/triangle-light-top-left.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+// TRIANGLE OUTLINE BOTTOM RIGHT
+.triangle-outline-bottom-right {
+  background-image: url('../images/shapes/triangle-outline-bottom-right.svg');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+// DARK TRIANGLE BOTTOM LEFT
+.dark-triangle-bottom-left {
+  background-image: url('../images/shapes/dark-triangle-bottom-left.svg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+// SMALL X TOP RIGHT
+.small-x-top-right {
+  background-image: url('../images/shapes/small-x-top-right.svg');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+// SMALL TRIANGLE BOTTOM LEFT
+.small-triangle-bottom-left {
+  background-image: url('../images/shapes/small-triangle-bottom-left.svg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+// DARK TRIANGLE BOTTOM RIGHT
+.dark-triangle-bottom-right {
+  background-image: url('../images/shapes/dark-triangle-bottom-right.svg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+// HORZ ZIG ZAGS
+.horz-zig-zags {
+  background-image: url('../images/shapes/horz-zig-zags.svg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }

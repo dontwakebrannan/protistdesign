@@ -437,8 +437,53 @@ ul.portfolio-gallery {
 .project-layout-two img {
   box-shadow: 0px 0px 18px rgba(0,0,0,0.2);
 }
+// PROJECT NAV
+.project-nav {
+  padding-top: $main-gutter * 2;
+  padding-bottom: $main-gutter * 2;
+  text-align: center;
+  background-color: $light-grey;
+  span {
+    display: inline-block;
+    min-height: 25px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    &:nth-child(1) {
+      margin-right: $main-gutter;
+      padding-left: 44px;
+      background-image: url('../images/nav-arrow-prev.svg');
+      background-position: left center;
+    }
+    &:nth-child(2) {
+      margin-left: $main-gutter;
+      padding-right: 44px;
+      background-image: url('../images/nav-arrow-next.svg');
+      background-position: right center;
+    }
+  }
+}
 
 // FOOTER
 footer {
+  position: relative;
   background-color: $black;
+}
+footer p {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+footer a {
+  border-bottom: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $cream;
+  @include grid-media($main-grid) {
+    font-size: 16px;
+  }
 }
