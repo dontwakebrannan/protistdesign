@@ -414,6 +414,20 @@ ul.portfolio-gallery {
     background-size: 650px;
   }
 }
+.qwikly .project-layout-one {
+  padding-bottom: 340px;
+  background-image: url('../images/qwikly/qwikly-logo.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 480px auto;
+  @include grid-media($main-grid) {
+    padding-bottom: 180px;
+  }
+  @include grid-media($desktops) {
+    padding-bottom: 260px;
+    background-size: 650px;
+  }
+}
 .project-layout-one > div:nth-child(1) {
   // margin-bottom: $main-gutter * 2;
 }

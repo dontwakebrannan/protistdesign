@@ -3,22 +3,18 @@ $main-grid: (
   gutter: $main-gutter,
   media: 768px,
 );
-
 $full-bleed: (
   columns: 12,
   gutter: 0px,
   media: 768px,
 );
-
 $seven-grid: (
   columns: 7,
   gutter: 0,
 );
-
 $desktops: (
   media: 1000px,
 );
-
 $large-desktops: (
   media: 1400px,
 );
