@@ -48,7 +48,7 @@ body {
   }
 }
 .learn-banner {
-  background-image: url('/images/person-boy-mobile.svg');
+  background-image: url('../images/person-boy-mobile.svg');
   background-repeat: no-repeat;
   background-position: 90% 100%;
   background-color: $cream;
@@ -92,6 +92,7 @@ body {
   @include grid-push(1, $full-bleed);
   text-align: center;
   @include grid-media($full-bleed) {
+    margin-top: $main-gutter; // temporary until nav
     @include grid-column(4, $full-bleed);
     @include grid-push(7, $full-bleed);
     text-align: left;
