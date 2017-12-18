@@ -7,7 +7,7 @@ id: work
   <div>
     {% include navigation.html %}
     <div class="logo">
-      <h1><a href="/"><img src="/images/protist-logo-white.svg" alt="Protist Design" /></a></h1>
+      <h1><a href="{{ '/' | prepend:site.baseurl }}"><img src="{{ '/images/protist-logo-white.svg' | prepend:site.baseurl }}" alt="Protist Design" /></a></h1>
     </div>
     <!--
     <div class="subtitle">
@@ -39,8 +39,8 @@ id: work
         <span>Identity</span>
         <span>Web design</span>
       </p>
-      <img src="/images/rapt-media/rapt-media-highlight.png" alt="Rapt Media" />
-      <a class="project-go" href="/work/rapt-media">Go</a>
+      <img src="{{ '/images/rapt-media/rapt-media-highlight.png' | prepend:site.baseurl }}" alt="Rapt Media" />
+      <a class="project-go" href="{{ '/work/rapt-media/' | prepend:site.baseurl }}">Go</a>
     </div>
 
     <div class="highlight">
@@ -50,7 +50,7 @@ id: work
         <span>Identity</span>
         <span>Web design</span>
       </p>
-      <img src="/images/qwikly/qwikly-highlight.png" alt="Qwikly" />
+      <img src="{{ '/images/qwikly/qwikly-highlight.png' | prepend:site.baseurl }}" alt="Qwikly" />
       <a class="project-go" href="/work/qwikly">Go</a>
     </div>
 
@@ -63,7 +63,7 @@ id: work
         <span>Development</span>
         <span>E-commerce</span>
       </p>
-      <img src="/images/100-year-party/100yearparty-highlight.png" alt="100 Year Party" />
+      <img src="{{ '/images/100-year-party/100yearparty-highlight.png' | prepend:site.baseurl }}" alt="100 Year Party" />
       <a class="project-go" href="/work/qwikly">Go</a>
     </div>
   </div>
