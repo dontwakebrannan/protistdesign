@@ -187,7 +187,7 @@ header[role=banner].work-banner {
 .about {
   position: relative;
   @include grid-media($main-grid) {
-    background-image: url('/images/person-boy.svg');
+    background-image: url('../images/person-boy.svg');
     background-repeat: no-repeat;
     background-size: 300px auto;
     background-position: 90% 100%;

@@ -17,7 +17,7 @@ title: Protist Design
 email: brannan@protistdesign.com
 description: >- # this means to ignore newlines until "baseurl:"
   A Portland design studio with a strong sense of craft and wonder
-baseurl: /protistdesign # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github.url: https://dontwakebrannan.github.io/protistdesign/
 twitter_username: jekyllrb
