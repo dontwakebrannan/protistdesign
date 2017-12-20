@@ -28,6 +28,7 @@ html {
   overflow: hidden;
 }
 body {
+  position: relative;
   perspective: 1px;
   transform-style: preserve-3d;
   height: 100%;
@@ -92,7 +93,6 @@ body {
   @include grid-push(1, $full-bleed);
   text-align: center;
   @include grid-media($full-bleed) {
-    margin-top: $main-gutter; // temporary until nav
     @include grid-column(4, $full-bleed);
     @include grid-push(7, $full-bleed);
     text-align: left;
