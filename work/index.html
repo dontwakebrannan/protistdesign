@@ -24,8 +24,10 @@ id: work
       <h2 class="caps">Our work</h2>
       <h3>A showcase of our craft</h3>
     </header>
+    <!--
     <h4>Highlights</h4>
-    <p>We're proud of our past collaborations with our clients. Here are a few highlights. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum velit eget pulvinar blandit. Cras faucibus lacus sit amet justo blandit placerat.</p>
+    <p>We're proud of our past collaborations with our clients. Here are a few highlights.</p>
+    -->
   </div>
 
   <div class="portfolio-highlights">
@@ -39,8 +41,10 @@ id: work
         <span>Identity</span>
         <span>Web design</span>
       </p>
-      <img src="{{ '/images/rapt-media/rapt-media-highlight.png' | prepend:site.baseurl }}" alt="Rapt Media" />
-      <a class="project-go" href="{{ '/work/rapt-media/' | prepend:site.baseurl }}">Go</a>
+      <a href="{{ '/work/rapt-media/' | prepend:site.baseurl }}">
+        <img src="{{ '/images/rapt-media/rapt-media-highlight.png' | prepend:site.baseurl }}" alt="Rapt Media" />
+        <span class="project-go">Go</span>
+      </a>
     </div>
 
     <div class="highlight">
@@ -50,10 +54,13 @@ id: work
         <span>Identity</span>
         <span>Web design</span>
       </p>
-      <img src="{{ '/images/qwikly/qwikly-highlight.png' | prepend:site.baseurl }}" alt="Qwikly" />
-      <a class="project-go" href="/work/qwikly">Go</a>
+      <a href="{{ '/work/qwikly/' | prepend:site.baseurl }}">
+        <img src="{{ '/images/qwikly/qwikly-highlight.png' | prepend:site.baseurl }}" alt="Qwikly" />
+        <span class="project-go">Go</span>
+      </a>
     </div>
 
+    <!--
     <div class="highlight">
       <h5><a href="/work/100-year-party">100 Year Party</a></h5>
       <p class="categories">
@@ -66,6 +73,7 @@ id: work
       <img src="{{ '/images/100-year-party/100yearparty-highlight.png' | prepend:site.baseurl }}" alt="100 Year Party" />
       <a class="project-go" href="/work/qwikly">Go</a>
     </div>
+    -->
   </div>
 
   <!--

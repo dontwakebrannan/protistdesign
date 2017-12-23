@@ -19,6 +19,9 @@ nav[role=navigation] a {
 .work-banner .active a { color: $yellow; }
 .project-banner nav[role=navigation] a {
   color: $cream;
+  &:hover {
+    color: $purple;
+  }
 }
 
 // HEADER
@@ -98,10 +101,14 @@ body {
     text-align: left;
   }
   h2 {
+    margin-top: 0;
     font-size: 17px;
     font-weight: 400;
     font-family: $sans-serif;
     line-height: 1.6;
+    @include grid-media($main-grid) {
+      margin-top: inherit;
+    }
   }
 }
 .project-banner {
@@ -313,15 +320,24 @@ header[role=banner].work-banner {
 }
 // PORTFOLIO HIGHLIGHTS
 .portfolio-highlights { }
+.categories {
+  line-height: 1em;
+}
 .categories span {
-  margin-right: 4px;
-  padding: 4px 8px;
-  font-size: 11px;
+  margin-right: 2px;
+  padding: 2px 4px;
+  font-size: 9px;
   font-weight: 700;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
   color: $black;
   background-color: #eee;
+  @include grid-media($main-grid) {
+    margin-right: 4px;
+    padding: 4px 8px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
 }
 .portfolio-highlights .highlight {
   position: relative;
@@ -333,19 +349,23 @@ header[role=banner].work-banner {
     display: block;
     right: 0;
     bottom: 0;
-    width: 310px;
-    height: 310px;
+    width: 150px;
+    height: 150px;
     background-image: url('../images/project-go-triangle.svg');
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom left;
+    @include grid-media($main-grid) {
+      width: 310px;
+      height: 310px;
+    }
   }
 }
-a.project-go {
+.project-go {
   position: absolute;
-  bottom: $main-gutter / 2;
-  right: $main-gutter / 2;
-  width: 140px;
-  height: 140px;
+  bottom: $main-gutter / 4;
+  right: $main-gutter / 4;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   text-indent: -10000px;
   overflow: hidden;
@@ -353,20 +373,27 @@ a.project-go {
   background-image: url('../images/project-go-arrow.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 35px auto;
+  background-size: 25px auto;
   border-bottom: 0px solid darken($yellow, 10%);
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
-  &:hover {
-    background-color: lighten($yellow, 10%);
-    border-bottom: 4px solid darken($yellow, 10%);
-    box-shadow: 6px 0px 15px rgba(0, 0, 0, 0.1);
+  @include grid-media($main-grid) {
+    bottom: $main-gutter / 2;
+    right: $main-gutter / 2;
+    width: 140px;
+    height: 140px;
+    background-size: 35px auto;
   }
-  &:active {
-    background-color: white;
-    border-bottom: 0px solid darken($yellow, 10%);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
-  }
+}
+a:hover .project-go {
+  background-color: lighten($yellow, 10%);
+  border-bottom: 4px solid darken($yellow, 10%);
+  box-shadow: 6px 0px 15px rgba(0, 0, 0, 0.1);
+}
+a:active .project-go {
+  background-color: white;
+  border-bottom: 0px solid darken($yellow, 10%);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
 }
 
 // PORTFOLIO GALLERY
@@ -435,9 +462,6 @@ ul.portfolio-gallery {
 .project-layout-two p {
   margin-bottom: $main-gutter * 2;
 }
-.project-layout-two img {
-  box-shadow: 0px 0px 18px rgba(0,0,0,0.2);
-}
 // PROJECT NAV
 .project-nav {
   padding-top: $main-gutter * 2;
@@ -462,6 +486,9 @@ ul.portfolio-gallery {
       padding-right: 44px;
       background-image: url('../images/nav-arrow-next.svg');
       background-position: right center;
+    }
+    &.inactive {
+      opacity: 0.2;
     }
   }
 }
@@ -528,4 +555,9 @@ footer a {
   margin: 0;
   font-size: 19px;
   letter-spacing: 1.5px;
+}
+
+// CAPTIONS
+.caption {
+  @extend .main-grid__twelve;
 }
