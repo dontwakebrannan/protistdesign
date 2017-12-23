@@ -62,6 +62,9 @@ body {
   }
 }
 .work-banner {
+  background-image: url('../images/person-girl-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
   background-color: $purple;
   @include grid-media($main-grid) {
     background-image: none;
@@ -105,11 +108,15 @@ body {
     font-size: 17px;
     font-weight: 400;
     font-family: $sans-serif;
-    line-height: 1.6;
+    letter-spacing: 1px;
+    line-height: 1.4;
     @include grid-media($main-grid) {
       margin-top: inherit;
     }
   }
+}
+.work-banner .subtitle h2 {
+  color: #fff;
 }
 .project-banner {
   position: relative;
@@ -189,6 +196,32 @@ header[role=banner].work-banner {
       background-color: $purple;
     }
   }
+}
+@keyframes downArrow {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.scroll-down-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  display: block;
+  width: 28px;
+  height: 40px;
+  background-image: url('../images/scroll-down-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: translateY(-5px);
+  animation-name: downArrow;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 // ABOUT
 .about {
@@ -321,6 +354,7 @@ header[role=banner].work-banner {
 // PORTFOLIO HIGHLIGHTS
 .portfolio-highlights { }
 .categories {
+  @include grid-column(12, $full-bleed);
   line-height: 1em;
 }
 .categories span {
