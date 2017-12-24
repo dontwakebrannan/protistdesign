@@ -1,4 +1,7 @@
-<nav role="navigation">
+<nav role="navigation" class="hidden">
+  <div class="logo">
+    <h1><a href="{{ '/' | prepend:site.baseurl }}"><img src="{{ '/images/protist-logo.svg' | prepend:site.baseurl }}" alt="Protist Design" /></a></h1>
+  </div>
   <ul>
     <li class="{% if page.id == 'learn' %}active{% endif %}"><a href="{{ '/' | prepend:site.baseurl }}">Learn</a></li>
     <li class="{% if page.id == 'work' %}active{% endif %}"><a href="{{ '/work' | prepend:site.baseurl }}">Work</a></li>

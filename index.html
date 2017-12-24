@@ -3,10 +3,8 @@ layout: default
 id: learn
 parallax: true
 ---
-<div>
 <header role="banner" class="main-banner learn-banner">
   <div>
-    {% include navigation.html %}
     <div class="logo">
       <h1><a href="{{ '/' | prepend:site.baseurl }}"><img src="{{ '/images/protist-logo.svg' | prepend:site.baseurl }}" alt="Protist Design" /></a></h1>
     </div>
@@ -16,87 +14,85 @@ parallax: true
     <a href="#about-us" class="scroll-down-arrow"></a>
   </div>
 </header>
-{% include surprise.html %}
-
 <main>
-<section id="about-us" class="about">
-  <div class="who">
-    <div>
-      <h2>Who</h2>
-      <p>Protist is a multidisciplinary design studio by Brannan McGill. With over 10 years of design experience, we strive to delight our clients through original, effective, and highly-craft design.</p>
+  {% include surprise.html %}
+  <section id="about-us" class="about">
+    <div class="who">
+      <div>
+        <h2>Who</h2>
+        <p>Protist is a multidisciplinary design studio by Brannan McGill. With over 10 years of design experience, we strive to delight our clients through original, effective, and highly-craft design.</p>
+      </div>
     </div>
-  </div>
-  <div class="what">
-    <div>
-      <h2>What</h2>
-      <ul>
-        <li>Product design &amp; development</li>
-        <li>Identity</li>
-        <li>Visual design</li>
-        <li>Creative</li>
-        <li>Information architecture</li>
-        <li>Wireframing</li>
-        <li>User experience</li>
-      </ul>
+    <div class="what">
+      <div>
+        <h2>What</h2>
+        <ul>
+          <li>Product design &amp; development</li>
+          <li>Identity</li>
+          <li>Visual design</li>
+          <li>Creative</li>
+          <li>Information architecture</li>
+          <li>Wireframing</li>
+          <li>User experience</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="process">
-	<section class="step one">
-    <div>
+  <section class="process">
+  	<section class="step one">
+      <div>
+        <div class="process-body">
+          <header class="page-heading">
+          	<h2>Pride in process</h2>
+          	<h3>A quick overview of our creative process</h3>
+          </header>
+      		<div class="step-number one">01</div>
+      		<h4>Discovery</h4>
+      		<p>At the beginning of every project, our objective is to obtain a concrete understanding of what is most effective for you and your audience. Through audience research, user personas, and a competitive analyses, we target every pixel toward making your project a success.</p>
+        </div>
+        <!--
+    		<div class="gallery">
+    			<div>
+    				<img src="/images/discovery-wireframing.svg" alt="" />
+    			</div>
+    			<div>
+    				<img src="images/discovery-personas.svg" alt="" />
+    			</div>
+    		</div>
+      </div>
+    -->
+  	</section>
+
+  	<section class="step two">
+      <div>
+        <div  class="process-body">
+      		<div class="step-number two">02</div>
+      		<h4>Design &amp; Implementation</h4>
+      		<p>With a strong understanding of what it takes to make your project uniquely successful, we begin executing on that strategy. Depending on the needs of the project this may involve UI/UX prototyping, design, and responsive development.</p>
+        </div>
+    		<div class="gallery">
+    			<div class="item">
+    				<img src="images/design-tweaking.svg" alt="" />
+    			</div>
+    			<div class="item">
+    				<img src="images/design-toggles.svg" alt="" />
+    			</div>
+    			<div class="item">
+    				<img src="images/design-lettering.svg" alt="" />
+    			</div>
+    		</div>
+     </div>
+  	</section>
+
+  	<section class="step three">
+      <div>
       <div class="process-body">
-        <header class="page-heading">
-        	<h2>Pride in process</h2>
-        	<h3>A quick overview of our creative process</h3>
-        </header>
-    		<div class="step-number one">01</div>
-    		<h4>Discovery</h4>
-    		<p>At the beginning of every project, our objective is to obtain a concrete understanding of what is most effective for you and your audience. Through audience research, user personas, and a competitive analyses, we target every pixel toward making your project a success.</p>
+    		<div class="step-number three">03</div>
+      		<h4>Closure</h4>
+      		<p>At the end of each project, we want to ensure that you're happy with the final results, and also discuss what worked and what could be improved. This helps to inform both next steps for the client as well us help us continually improve the quality of our work.</p>
+        </div>
       </div>
-      <!--
-  		<div class="gallery">
-  			<div>
-  				<img src="/images/discovery-wireframing.svg" alt="" />
-  			</div>
-  			<div>
-  				<img src="images/discovery-personas.svg" alt="" />
-  			</div>
-  		</div>
-    </div>
-  -->
-	</section>
-
-	<section class="step two">
-    <div>
-      <div  class="process-body">
-    		<div class="step-number two">02</div>
-    		<h4>Design &amp; Implementation</h4>
-    		<p>With a strong understanding of what it takes to make your project uniquely successful, we begin executing on that strategy. Depending on the needs of the project this may involve UI/UX prototyping, design, and responsive development.</p>
-      </div>
-  		<div class="gallery">
-  			<div class="item">
-  				<img src="images/design-tweaking.svg" alt="" />
-  			</div>
-  			<div class="item">
-  				<img src="images/design-toggles.svg" alt="" />
-  			</div>
-  			<div class="item">
-  				<img src="images/design-lettering.svg" alt="" />
-  			</div>
-  		</div>
-   </div>
-	</section>
-
-	<section class="step three">
-    <div>
-    <div class="process-body">
-  		<div class="step-number three">03</div>
-    		<h4>Closure</h4>
-    		<p>At the end of each project, we want to ensure that you're happy with the final results, and also discuss what worked and what could be improved. This helps to inform both next steps for the client as well us help us continually improve the quality of our work.</p>
-      </div>
-    </div>
-	</section>
-</section>
+  	</section>
+  </section>
 </main>
-{% include surprise-footer.html %}

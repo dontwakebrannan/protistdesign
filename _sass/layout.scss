@@ -61,13 +61,13 @@
 }
 
 // WORK SECTION
-.work {
+.work-section {
   @extend .main-section;
 }
-.work > div {
+.work-section > div {
   @extend .main-grid__twelve;
 }
-.work > div:first-child { // work heading
+.work-section > div:first-child { // work heading
   @extend .main-grid__twelve;
   @include grid-media($main-grid) {
     @include grid-column(8);

@@ -1,7 +1,45 @@
-// NAVIGATION
+nav[role=navigation] {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 55px;
+  z-index: 4;
+  background-color: rgba(255,255,255,0.95);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  &.hidden {
+    background-color: rgba(255,255,255,0.0);
+    box-shadow: none;
+    transition: background-color 0.2s ease-out;
+  }
+}
+nav[role=navigation] .logo {
+  float: left;
+  display: none;
+  @include grid-media($full-bleed) {
+    display: block;
+  }
+  h1 {
+    margin: 0;
+  }
+  img {
+    max-width: 120px;
+    margin-top: 12px;
+    margin-left: 20px;
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+  }
+}
+nav[role=navigation].hidden .logo {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
 nav[role=navigation] ul {
   display: flex;
   justify-content: center;
+  margin: 0;
   padding: 0;
   list-style: none;
   @include grid-media($full-bleed) {
@@ -10,27 +48,32 @@ nav[role=navigation] ul {
   }
 }
 nav[role=navigation] li {
-  padding: $main-gutter / 2;
+  padding: $main-gutter / 3;
 }
 nav[role=navigation] a {
   letter-spacing: 1.2px;
 }
-.learn-banner .active a { color: $red; }
-.work-banner .active a { color: $yellow; }
+.learn .active a { color: $red; }
+.work .active a { color: $yellow; }
+/*
 .project-banner nav[role=navigation] a {
   color: $cream;
   &:hover {
     color: $purple;
   }
 }
+*/
 
 // HEADER
 // parallax
 html {
   height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 body {
+  height: 100%;
+}
+.parallax {
   position: relative;
   perspective: 1px;
   transform-style: preserve-3d;
@@ -38,7 +81,6 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-// end parallax
 .main-banner {
   position: relative;
   height: 100vh;
@@ -76,11 +118,13 @@ body {
   @include grid-container;
 }
 .main-banner .logo {
+  margin-top: $main-gutter;
   @include grid-column(8, $full-bleed);
   @include grid-push(2, $full-bleed);
   @include grid-media($full-bleed) {
     position: absolute;
     bottom: $main-gutter;
+    margin-top: 0;
     @include grid-column(3, $full-bleed);
     @include grid-push(1, $full-bleed);
   }
@@ -100,6 +144,7 @@ body {
   @include grid-push(1, $full-bleed);
   text-align: center;
   @include grid-media($full-bleed) {
+    margin-top: 55px;
     @include grid-column(4, $full-bleed);
     @include grid-push(7, $full-bleed);
     text-align: left;
@@ -332,13 +377,13 @@ header[role=banner].work-banner {
   @include grid-column(4, $main-grid);
 }
 // WORK
-.work h2, .work h3, .work h4 {
+.work-section h2, .work-section h3, .work-section h4 {
   text-align: center;
 }
-.work h3 {
+.work-section h3 {
   color: $purple;
 }
-.work h4:before {
+.work-section h4:before {
   content: '';
   display: block;
   width: 100%;
@@ -349,7 +394,7 @@ header[role=banner].work-banner {
   background-repeat: no-repeat;
   background-position: center;
 }
-.work h5 {
+.work-section h5 {
   margin-bottom: $main-gutter / 4;
 }
 // PORTFOLIO HIGHLIGHTS

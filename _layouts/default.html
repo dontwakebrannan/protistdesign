@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-<body class="{% if page.parallax %}parallax{% endif %}">
-  {{ content }}
-  <footer>
-    <p><a href="mailto:hello@protistdesign.com">hello@protistdesign.com</a></p>
-  </footer>
+<body class="{{ page.id }}">
+  {% include navigation.html %}
+  <div class="parallax">
+    {{ content }}
+    {% include surprise-footer.html %}
+    <footer>
+      <p><a href="mailto:hello@protistdesign.com">hello@protistdesign.com</a></p>
+    </footer>
+  </div>
 {% include scripts.html %}
 </body>
 </html>

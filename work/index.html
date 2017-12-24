@@ -1,11 +1,10 @@
 ---
 layout: default
 id: work
+parallax: true
 ---
-
 <header role="banner" class="main-banner work-banner">
   <div>
-    {% include navigation.html %}
     <div class="logo">
       <h1><a href="{{ '/' | prepend:site.baseurl }}"><img src="{{ '/images/protist-logo-white.svg' | prepend:site.baseurl }}" alt="Protist Design" /></a></h1>
     </div>
@@ -15,80 +14,79 @@ id: work
     <a href="#scroll-to" class="scroll-down-arrow"></a>
   </div>
 </header>
-
 <main>
-<section id="our-work" class="work">
-  <div>
-    <header class="page-heading">
-      <h2 class="caps">Our work</h2>
-      <h3>A showcase of our craft</h3>
-    </header>
+  <section id="our-work" class="work-section">
+    <div>
+      <header class="page-heading">
+        <h2 class="caps">Our work</h2>
+        <h3>A showcase of our craft</h3>
+      </header>
+      <!--
+      <h4>Highlights</h4>
+      <p>We're proud of our past collaborations with our clients. Here are a few highlights.</p> -->
+    </div>
+
+    <div class="portfolio-highlights">
+
+      <div class="highlight">
+        <h5><a href="/work/rapt-media">Rapt Media</a></h5>
+        <a href="{{ '/work/rapt-media/' | prepend:site.baseurl }}">
+          <img src="{{ '/images/rapt-media/rapt-media-highlight.png' | prepend:site.baseurl }}" alt="Rapt Media" />
+          <span class="project-go">Go</span>
+        </a>
+        <p class="categories">
+          <span>UI/UX</span>
+          <span>Product design</span>
+          <span>Direction</span>
+          <span>Identity</span>
+          <span>Web design</span>
+        </p>
+      </div>
+
+      <div class="highlight">
+        <h5><a href="/work/qwikly">Qwikly</a></h5>
+        <a href="{{ '/work/qwikly/' | prepend:site.baseurl }}">
+          <img src="{{ '/images/qwikly/qwikly-highlight.png' | prepend:site.baseurl }}" alt="Qwikly" />
+          <span class="project-go">Go</span>
+        </a>
+        <p class="categories">
+          <span>UI/UX design</span>
+          <span>Identity</span>
+          <span>Web design</span>
+        </p>
+      </div>
+
+      <!--
+      <div class="highlight">
+        <h5><a href="/work/100-year-party">100 Year Party</a></h5>
+        <p class="categories">
+          <span>UI/UX design</span>
+          <span>Identity</span>
+          <span>Web design</span>
+          <span>Development</span>
+          <span>E-commerce</span>
+        </p>
+        <img src="{{ '/images/100-year-party/100yearparty-highlight.png' | prepend:site.baseurl }}" alt="100 Year Party" />
+        <a class="project-go" href="/work/qwikly">Go</a>
+      </div>
+      -->
+    </div>
+
     <!--
-    <h4>Highlights</h4>
-    <p>We're proud of our past collaborations with our clients. Here are a few highlights.</p> -->
-  </div>
-
-  <div class="portfolio-highlights">
-
-    <div class="highlight">
-      <h5><a href="/work/rapt-media">Rapt Media</a></h5>
-      <a href="{{ '/work/rapt-media/' | prepend:site.baseurl }}">
-        <img src="{{ '/images/rapt-media/rapt-media-highlight.png' | prepend:site.baseurl }}" alt="Rapt Media" />
-        <span class="project-go">Go</span>
-      </a>
-      <p class="categories">
-        <span>UI/UX</span>
-        <span>Product design</span>
-        <span>Direction</span>
-        <span>Identity</span>
-        <span>Web design</span>
-      </p>
-    </div>
-
-    <div class="highlight">
-      <h5><a href="/work/qwikly">Qwikly</a></h5>
-      <a href="{{ '/work/qwikly/' | prepend:site.baseurl }}">
-        <img src="{{ '/images/qwikly/qwikly-highlight.png' | prepend:site.baseurl }}" alt="Qwikly" />
-        <span class="project-go">Go</span>
-      </a>
-      <p class="categories">
-        <span>UI/UX design</span>
-        <span>Identity</span>
-        <span>Web design</span>
-      </p>
-    </div>
-
-    <!--
-    <div class="highlight">
-      <h5><a href="/work/100-year-party">100 Year Party</a></h5>
-      <p class="categories">
-        <span>UI/UX design</span>
-        <span>Identity</span>
-        <span>Web design</span>
-        <span>Development</span>
-        <span>E-commerce</span>
-      </p>
-      <img src="{{ '/images/100-year-party/100yearparty-highlight.png' | prepend:site.baseurl }}" alt="100 Year Party" />
-      <a class="project-go" href="/work/qwikly">Go</a>
-    </div>
+    <ul class="portfolio-gallery">
+      <li><a href="#"><img src="/images/gallery/comet-cover.png" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/gallery/communication.png" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
+      <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
+    </ul>
     -->
-  </div>
-
-  <!--
-  <ul class="portfolio-gallery">
-    <li><a href="#"><img src="/images/gallery/comet-cover.png" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/gallery/communication.png" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
-    <li><a href="#"><img src="/images/temp-portfolio.svg" alt="100 Year Party" /></a></li>
-  </ul>
-  -->
-</section>
+  </section>
 </main>
