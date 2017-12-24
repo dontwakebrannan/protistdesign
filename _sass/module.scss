@@ -367,7 +367,9 @@ header[role=banner].work-banner {
   padding-bottom: 0;
 }
 .gallery {
+  clear: both;
   display: none;
+  padding-top: $main-gutter / 2;
   @include grid-container;
   @include grid-media($main-grid) {
     display: block;
