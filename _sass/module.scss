@@ -5,7 +5,7 @@ nav[role=navigation] {
   left: 0;
   display: block;
   width: 100%;
-  height: 55px;
+  height: $header-height;
   z-index: 4;
   background-color: rgba(255,255,255,0.95);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
@@ -55,14 +55,6 @@ nav[role=navigation] a {
 }
 .learn .active a { color: $red; }
 .work .active a { color: $yellow; }
-/*
-.project-banner nav[role=navigation] a {
-  color: $cream;
-  &:hover {
-    color: $purple;
-  }
-}
-*/
 
 // HEADER
 // parallax
@@ -76,6 +68,9 @@ body {
 }
 main {
   background-color: #fff;
+  &.project {
+    padding-top: $header-height;
+  }
 }
 @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
   .parallax {
@@ -90,22 +85,20 @@ main {
   }
 }
 .main-banner {
-  // position: relative;
   width: 100%; // force firefox to paint correctly on load
   height: 100vh;
   min-height: 500px;
   overflow: hidden;
   max-height: 600px;
-  // &.learn-banner { background-color: $cream; }
-  // &.work-banner { background-color: $purple; }
   @include grid-media($main-grid) {
     max-height: none;
   }
 }
 .learn-banner {
-  background-image: url('../images/person-boy-mobile.svg');
-  background-repeat: no-repeat;
-  background-position: 90% 100%;
+  background-image: url('../images/person-boy-mobile.svg'), url('../images/learn-mobile-bg.svg');
+  background-repeat: no-repeat, repeat;
+  background-position: 90% 100%, 0 0;
+  background-attachment: scroll, fixed;
   background-color: $cream;
   @include grid-media($main-grid) {
     background-image: none;
@@ -153,7 +146,7 @@ main {
   @include grid-push(1, $full-bleed);
   text-align: center;
   @include grid-media($full-bleed) {
-    margin-top: 55px;
+    margin-top: $header-height;
     @include grid-column(4, $full-bleed);
     @include grid-push(7, $full-bleed);
     text-align: left;
@@ -181,18 +174,8 @@ main {
 .project-banner > div {
   @include grid-container;
 }
-.project-banner .logo {
-  @include grid-column(4, $main-grid);
-
-  img {
-    max-width: 300px;
-  }
-}
 header[role=banner].learn-banner {
   @include grid-media($main-grid) {
-    // position: relative;
-    // min-height: 100vh;
-    // background-color: $cream;
     &:before, &:after {
       content: '';
       position: absolute;
@@ -261,23 +244,26 @@ header[role=banner].work-banner {
   }
 }
 .scroll-down-arrow {
-  position: absolute;
-  left: 50%;
-  bottom: 15px;
-  display: block;
-  width: 28px;
-  height: 40px;
-  margin-left: -12px;
-  background-image: url('../images/scroll-down-arrow.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  transform: translateY(-5px);
-  animation-name: downArrow;
-  animation-duration: 1s;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  display: none;
+  @include grid-media($main-grid) {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    display: block;
+    width: 28px;
+    height: 40px;
+    margin-left: -12px;
+    background-image: url('../images/scroll-down-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: translateY(-5px);
+    animation-name: downArrow;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 }
 // ABOUT
 .about {
@@ -328,7 +314,7 @@ header[role=banner].work-banner {
 .step.one {
   position: relative;
   overflow: hidden;
-  background-color: transparent;
+  background-color: $light-purple;
   @include grid-media($main-grid) {
     padding-bottom: 300px;
     background-image: url('../images/process-illustrations.svg'), url('../images/step-one-bg.svg');
@@ -350,7 +336,8 @@ header[role=banner].work-banner {
 .step.one .one {
   margin-top: $main-gutter;
 }
-.step.two > div {
+.step.two > div,
+.step.three > div {
   padding-bottom: 0;
 }
 .gallery {
@@ -534,11 +521,24 @@ ul.portfolio-gallery {
   background-position: bottom right;
   background-size: 480px auto;
   @include grid-media($main-grid) {
-    padding-bottom: 180px;
+    padding-bottom: 120px;
+    background-size: 450px;
+  }
+  @include grid-media($small-desktops) {
+    padding-bottom: 170px;
+    background-size: 520px;
   }
   @include grid-media($desktops) {
     padding-bottom: 260px;
-    background-size: 650px;
+    background-size: 600px;
+  }
+  @include grid-media($medium-desktops) {
+    padding-bottom: 300px;
+    background-size: 700px;
+  }
+  @include grid-media($large-desktops) {
+    padding-bottom: 340px;
+    background-size: 740px;
   }
 }
 .project-layout-one > div:nth-child(1) {
@@ -598,6 +598,9 @@ footer a {
   color: $cream;
   @include grid-media($main-grid) {
     font-size: 16px;
+  }
+  &:hover {
+    color: $purple;
   }
 }
 
