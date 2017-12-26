@@ -72,17 +72,26 @@ html {
 }
 body {
   height: 100%;
+  transform: translateZ(0);
 }
-.parallax {
-  position: relative;
-  perspective: 1px;
-  transform-style: preserve-3d;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+main {
+  background-color: #fff;
+}
+@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+  .parallax {
+    position: relative;
+    perspective: 1px;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
 }
 .main-banner {
-  position: relative;
+  // position: relative;
+  width: 100%; // force firefox to paint correctly on load
   height: 100vh;
   min-height: 500px;
   overflow: hidden;
@@ -181,7 +190,7 @@ body {
 }
 header[role=banner].learn-banner {
   @include grid-media($main-grid) {
-    position: relative;
+    // position: relative;
     // min-height: 100vh;
     // background-color: $cream;
     &:before, &:after {
@@ -210,7 +219,7 @@ header[role=banner].learn-banner {
 }
 header[role=banner].work-banner {
   @include grid-media($main-grid) {
-    position: relative;
+    // position: relative;
     // min-height: 90vh;
     &:before, &:after {
       content: '';
@@ -254,10 +263,11 @@ header[role=banner].work-banner {
 .scroll-down-arrow {
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: 15px;
   display: block;
   width: 28px;
   height: 40px;
+  margin-left: -12px;
   background-image: url('../images/scroll-down-arrow.svg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -272,6 +282,7 @@ header[role=banner].work-banner {
 // ABOUT
 .about {
   position: relative;
+  background-color: #fff;
   @include grid-media($main-grid) {
     background-image: url('../images/person-boy.svg');
     background-repeat: no-repeat;
@@ -288,7 +299,7 @@ header[role=banner].work-banner {
     bottom: 0;
     width: 1px;
     border-right: 1px solid $yellow;
-    z-index: -1;
+    z-index: 0;
   }
 }
 .about .what {
@@ -320,34 +331,10 @@ header[role=banner].work-banner {
   background-color: transparent;
   @include grid-media($main-grid) {
     padding-bottom: 300px;
-    background-image: url('../images/process-illustrations.svg');
+    background-image: url('../images/process-illustrations.svg'), url('../images/step-one-bg.svg');
     background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: 100%;
-  }
-  &:before {
-    position: absolute;
-    top: -50%;
-    bottom: -50%;
-    left: 50%;
-    content: '';
-    display: block;
-    width: 400px;
-    margin-left: -200px;
-    z-index: -1;
-    background-color: $light-yellow;
-    transform: rotate(-45deg);
-  }
-  &:after {
-    position: absolute;
-    content: '';
-    display: block;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -2;
-    background-color: $light-purple;
+    background-position: bottom center, center;
+    background-size: 100%, cover;
   }
 }
 .step-number {
@@ -379,6 +366,9 @@ header[role=banner].work-banner {
   @include grid-column(4, $main-grid);
 }
 // WORK
+.work-section {
+  background-color: white;
+}
 .work-section h2, .work-section h3, .work-section h4 {
   text-align: center;
 }
@@ -517,11 +507,24 @@ ul.portfolio-gallery {
   background-position: bottom right;
   background-size: 480px auto;
   @include grid-media($main-grid) {
-    padding-bottom: 180px;
+    padding-bottom: 120px;
+    background-size: 450px;
+  }
+  @include grid-media($small-desktops) {
+    padding-bottom: 170px;
+    background-size: 520px;
   }
   @include grid-media($desktops) {
     padding-bottom: 260px;
-    background-size: 650px;
+    background-size: 600px;
+  }
+  @include grid-media($medium-desktops) {
+    padding-bottom: 300px;
+    background-size: 700px;
+  }
+  @include grid-media($large-desktops) {
+    padding-bottom: 340px;
+    background-size: 740px;
   }
 }
 .qwikly .project-layout-one {

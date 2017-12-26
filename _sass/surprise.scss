@@ -15,6 +15,7 @@
 
 .surprise {
   display: none;
+  background-color: #fff;
   @include grid-media($main-grid) {
     display: block;
   }

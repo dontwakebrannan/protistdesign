@@ -12,8 +12,14 @@ $seven-grid: (
   columns: 7,
   gutter: 0,
 );
+$small-desktops: (
+  media: 900px,
+);
 $desktops: (
   media: 1000px,
+);
+$medium-desktops: (
+  media: 1200px,
 );
 $large-desktops: (
   media: 1400px,
