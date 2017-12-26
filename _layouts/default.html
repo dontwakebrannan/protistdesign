@@ -5,7 +5,9 @@
   {% include navigation.html %}
   <div class="parallax">
     {{ content }}
-    {% include surprise-footer.html %}
+    {% if page.id == 'learn' %}
+      {% include surprise-footer.html %}
+    {% endif %}
     <footer>
       <p><a href="mailto:hello@protistdesign.com">hello@protistdesign.com</a></p>
     </footer>
