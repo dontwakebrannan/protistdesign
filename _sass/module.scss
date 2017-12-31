@@ -54,7 +54,9 @@ nav[role=navigation] a {
   letter-spacing: 1.2px;
 }
 .learn .active a { color: $red; }
-.work .active a { color: $yellow; }
+.work nav.hidden a { color: #fff; }
+.work nav.hidden a:active { color: $yellow; }
+.work nav .active a { color: $yellow; }
 
 // HEADER
 // parallax
