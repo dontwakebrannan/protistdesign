@@ -192,11 +192,11 @@ header[role=banner].learn-banner {
       background-position: center;
     }
     &:after {
-      transform: translateZ(-1px) scale(2);
+      // transform: translateZ(-1px) scale(2);
       background-image: url('../images/symbols.svg');
     }
     &:before {
-      transform: translateZ(-2px) scale(3);
+      // transform: translateZ(-2px) scale(3);
       background-image: url('../images/big-letters.svg');
       background-color: $cream;
     }
@@ -234,6 +234,19 @@ header[role=banner].work-banner {
       background-repeat: no-repeat;
       background-size: cover;
       background-color: $purple;
+    }
+  }
+}
+@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
+  header[role=banner].learn-banner,
+  header[role=banner].work-banner {
+    @include grid-media($main-grid) {
+      &:after {
+        transform: translateZ(-1px) scale(2);
+      }
+      &:before {
+        transform: translateZ(-2px) scale(3);
+      }
     }
   }
 }
