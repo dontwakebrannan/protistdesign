@@ -146,7 +146,7 @@ main {
   @include grid-push(1, $full-bleed);
   text-align: center;
   @include grid-media($full-bleed) {
-    margin-top: $header-height;
+    margin-top: 40px;
     @include grid-column(4, $full-bleed);
     @include grid-push(7, $full-bleed);
     text-align: left;
@@ -219,7 +219,7 @@ header[role=banner].work-banner {
       transform: translateZ(-1px) scale(2);
       background-image: url('../images/work-shapes.svg');
       background-position: bottom;
-      background-size: contain;
+      background-size: cover;
     }
     &:before {
       top: 0;
@@ -227,7 +227,7 @@ header[role=banner].work-banner {
       bottom: 0;
       left: 0;
       transform: translateZ(-2px) scale(3);
-      background-image: url('../images/work-cover-bg.png');
+      background-image: url('../images/work-cover-bg2.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
