@@ -43,3 +43,8 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  gallery:
+    output: true
+    permalink: /work/:path/

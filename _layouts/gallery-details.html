@@ -1,0 +1,11 @@
+<!DOCTYPE html
+<html>
+{% include head.html %}
+<body class="{{ page.id }} gallery-details">
+  {% include navigation.html %}
+  <section class="gallery-item">
+    {{ content }}
+  </section>
+{% include scripts.html %}
+</body>
+</html>

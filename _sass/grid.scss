@@ -28,18 +28,33 @@ $large-desktops: (
 // Main Grid
 .main-grid { @include grid-container; }
 
-.main-grid__one { @include grid-column(1, $main-grid); }
-.main-grid__two { @include grid-column(2, $main-grid); }
-.main-grid__three { @include grid-column(3, $main-grid); }
-.main-grid__four { @include grid-column(4, $main-grid); }
-.main-grid__five { @include grid-column(5, $main-grid); }
-.main-grid__six { @include grid-column(6, $main-grid); }
-.main-grid__seven { @include grid-column(7, $main-grid); }
-.main-grid__eight { @include grid-column(8, $main-grid); }
-.main-grid__nine { @include grid-column(9, $main-grid); }
-.main-grid__ten { @include grid-column(10, $main-grid); }
-.main-grid__eleven { @include grid-column(11, $main-grid); }
+.main-grid__one { @include grid-column(12, $main-grid); }
+.main-grid__two { @include grid-column(12, $main-grid); }
+.main-grid__three { @include grid-column(12, $main-grid); }
+.main-grid__four { @include grid-column(12, $main-grid); }
+.main-grid__five { @include grid-column(12, $main-grid); }
+.main-grid__six { @include grid-column(12, $main-grid); }
+.main-grid__seven { @include grid-column(12, $main-grid); }
+.main-grid__eight { @include grid-column(12, $main-grid); }
+.main-grid__nine { @include grid-column(12, $main-grid); }
+.main-grid__ten { @include grid-column(12, $main-grid); }
+.main-grid__eleven { @include grid-column(12, $main-grid); }
 .main-grid__twelve { @include grid-column(12, $main-grid); }
+
+@include grid-media($main-grid) {
+  .main-grid__one { @include grid-column(1, $main-grid); }
+  .main-grid__two { @include grid-column(2, $main-grid); }
+  .main-grid__three { @include grid-column(3, $main-grid); }
+  .main-grid__four { @include grid-column(4, $main-grid); }
+  .main-grid__five { @include grid-column(5, $main-grid); }
+  .main-grid__six { @include grid-column(6, $main-grid); }
+  .main-grid__seven { @include grid-column(7, $main-grid); }
+  .main-grid__eight { @include grid-column(8, $main-grid); }
+  .main-grid__nine { @include grid-column(9, $main-grid); }
+  .main-grid__ten { @include grid-column(10, $main-grid); }
+  .main-grid__eleven { @include grid-column(11, $main-grid); }
+  .main-grid__twelve { @include grid-column(12, $main-grid); }
+}
 
 .main-grid__push-two { @include grid-push(2, $main-grid); }
 

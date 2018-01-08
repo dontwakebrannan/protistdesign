@@ -469,18 +469,31 @@ a:active .project-go {
   border-bottom: 0px solid darken($yellow, 10%);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
 }
-
 // PORTFOLIO GALLERY
 ul.portfolio-gallery {
   list-style: none;
 }
 .portfolio-gallery li {
 }
-
+.portfolio-gallery h6 {
+  margin-top: 5px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+}
+// WORK IMAGES
+.portfolio-highlights img,
+.portfolio-gallery img {
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
 // PROJECT INTRO
 .project-intro {
   color: $cream;
   background-color: $black;
+  .gallery-details & {
+    padding-top: $main-gutter;
+    color: $black;
+    background-color: $light-grey;
+  }
 }
 .project-intro h2,
 .project-layout-three h2 {
@@ -493,6 +506,9 @@ ul.portfolio-gallery {
 .project-intro p,
 .project-layout-three p {
   margin-bottom: $main-gutter * 2;
+  .gallery-details & {
+    margin-bottom: $main-gutter;
+  }
 }
 .project-intro a {
   border-bottom: 1px solid $purple;
@@ -561,6 +577,26 @@ ul.portfolio-gallery {
 }
 .project-layout-two p {
   margin-bottom: $main-gutter * 2;
+}
+// GALLERY LAYOUT
+.gallery-details {
+  .project-content > div {
+    @include grid-container;
+    padding-top: 0;
+    padding-bottom: 0;
+    > div {
+      /*
+      @include grid-column(12, $main-grid);
+      @include grid-media($main-grid) {
+        @include grid-column(6, $main-grid);
+      }
+      */
+    }
+    img {
+      margin-bottom: $main-gutter;
+      box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    }
+  }
 }
 // PROJECT NAV
 .project-nav {
