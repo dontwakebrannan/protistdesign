@@ -15,6 +15,23 @@ nav[role=navigation] {
     transition: background-color 0.2s ease-out;
   }
 }
+nav[role=navigation] .back {
+  float: left;
+  display: block;
+  width: $header-height;
+  height: $header-height;
+  text-indent: -10000px;
+  overflow: hidden;
+  background-color: darken($light-grey, 5%);
+  background-image: url('../images/nav-arrow-prev.svg');
+  background-size: 30px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: darken($light-grey, 10%);
+  }
+}
 nav[role=navigation] .logo {
   float: left;
   display: none;

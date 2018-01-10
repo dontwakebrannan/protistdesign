@@ -1,4 +1,7 @@
-<nav role="navigation" class="hidden{% if page.pageType == 'project' %} project{% endif %}">
+<nav role="navigation" class="hidden{% if page.type == 'project' %} project{% endif %}">
+  {% if page.type == 'project' %}
+    <a href="{{ '/work' | prepend:site.baseurl }}" class="back">Back</a>
+  {% endif %}
   <div class="logo">
     <h1><a href="{{ '/' | prepend:site.baseurl }}"><img src="{{ '/images/protist-logo.svg' | prepend:site.baseurl }}" alt="Protist Design" /></a></h1>
   </div>
