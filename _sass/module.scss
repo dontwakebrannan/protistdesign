@@ -9,10 +9,15 @@ nav[role=navigation] {
   z-index: 4;
   background-color: rgba(255,255,255,0.95);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
   &.hidden {
+    height: $header-height;
     background-color: rgba(255,255,255,0.0);
     box-shadow: none;
     transition: background-color 0.2s ease-out;
+    @include grid-media($main-grid) {
+      height: $header-height-expanded;
+    }
   }
 }
 nav[role=navigation] .back {
@@ -56,6 +61,8 @@ nav[role=navigation].hidden .logo {
 nav[role=navigation] ul {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -64,10 +71,14 @@ nav[role=navigation] ul {
     margin-right: $main-gutter;
   }
 }
+nav[role=navigation].project ul {
+  justify-content: flex-end;
+}
 nav[role=navigation] li {
   padding: $main-gutter / 3;
 }
 nav[role=navigation] a {
+  display: block;
   letter-spacing: 1.2px;
 }
 .learn .active a { color: $red; }
@@ -165,7 +176,7 @@ main {
   @include grid-push(1, $full-bleed);
   text-align: center;
   @include grid-media($full-bleed) {
-    margin-top: 40px;
+    margin-top: 60px;
     @include grid-column(4, $full-bleed);
     @include grid-push(7, $full-bleed);
     text-align: left;
