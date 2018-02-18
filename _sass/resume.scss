@@ -102,6 +102,14 @@ body {
   background-color: darken($light-grey, 5%);
 }
 
+a, a:visited {
+  color: $purple;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 h1 {
   margin: 0;
   font-family: $serif;
@@ -144,6 +152,15 @@ h5 {
   letter-spacing: 0.8px;
   text-transform: uppercase;
   color: $black;
+
+  a {
+    display: inline-block;
+    color: $purple;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 ul {
@@ -405,6 +422,7 @@ header .subtitle {
   }
 }
 .education {
+  margin-bottom: $main-gutter * 2;
   // border-top: 1px solid $black;
 }
 
@@ -416,5 +434,6 @@ header .subtitle {
 }
 
 .portfolio {
+  min-height: 4000px;
   background-color: $light-grey;
 }
