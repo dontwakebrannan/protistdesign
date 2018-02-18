@@ -106,6 +106,7 @@ h1 {
   margin: 0;
   font-family: $serif;
   font-size: 60px;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -161,6 +162,20 @@ ul {
   }
 }
 
+.side-gig {
+  display: inline-block;
+  margin-top: -2px;
+  margin-left: 4px;
+  padding: 2px 4px;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #fff;
+  background-color: $black;
+}
+
 .main-wrap {
   max-width: 960px;
   margin: 0 auto;
@@ -168,10 +183,17 @@ ul {
 }
 
 header {
-  min-height: 240px;
+  min-height: 200px;
   position: relative;
   padding: $main-gutter;
   background-color: $yellow;
+  @include grid-media($main-grid) {
+    min-height: 260px;
+    background-image: url('../images/resume/header-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 header .hgroup {
@@ -180,19 +202,27 @@ header .hgroup {
 }
 
 header .subtitle {
-  position: absolute;
-  right: $main-gutter;
-  max-width: 300px;
-  font-size: 16px;
-  line-height: 1.4em;
-  text-align: right;
+  display: none;
+  @include grid-media($main-grid) {
+    display: block;
+    position: absolute;
+    right: $main-gutter;
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 1.4em;
+    text-align: right;
+  }
 }
 
 .content-wrap {
-  display: flex;
-  align-items: flex-start;
+  display: block;
   padding: $main-gutter;
   background-color: #fff;
+
+  @include grid-media($main-grid) {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .info, .work {
@@ -202,7 +232,7 @@ header .subtitle {
 }
 
 .info {
-  width: 30%;
+  width: 100%;
   margin-bottom: $main-gutter * 2;
 
   @include grid-media($main-grid) {
@@ -219,10 +249,10 @@ header .subtitle {
 }
 
 .history {
-  width: 70%;
-  margin-left: $main-gutter;
+  width: 100%;
   @include grid-media($main-grid) {
     width: 55%;
+    margin-left: $main-gutter;
   }
   @include grid-media($small-desktops) {
     width: 66.666666%;
@@ -230,14 +260,13 @@ header .subtitle {
 }
 
 .columns {
-  display: block;
-  @include grid-media($main-grid) {
-    display: flex;
-  }
+  display: flex;
 
   > ul:first-child {
+    width: 50%;
     padding-right: $main-gutter / 1.5;
     @include grid-media($small-desktops) {
+      width: auto;
       padding-right: $main-gutter;
     }
   }
@@ -263,12 +292,17 @@ header .subtitle {
   &.mail {
     background-image: url('../images/resume/mail.svg');
   }
+  &.dribbble {
+    background-image: url('../images/resume/dribbble.svg');
+  }
 }
 
 .tools progress {
   float: right;
-  width: 140px;
-  // margin-right: $main-gutter / 2;
+  width: 50%;
+  @include grid-media($main-grid) {
+    width: 140px;
+  }
 }
 
 .tools progress[value] {
@@ -294,9 +328,12 @@ header .subtitle {
 
 .work-wrap {
   position: relative;
-  margin-left: $main-gutter / 2;
-  padding-left: $main-gutter / 2;
-  border-left: 1px dotted $black;
+
+  @include grid-media($main-grid) {
+    margin-left: $main-gutter / 2;
+    padding-left: $main-gutter / 2;
+    border-left: 1px dotted $black;
+  }
 }
 
 .work-wrap h4 {
@@ -329,43 +366,44 @@ header .subtitle {
   margin-top: 0;
 }
 
-.work h4:before {
-  content: '';
-  position: absolute;
-  top: 42px;
-  left: -31px;
-  display: block;
-  width: 9px;
-  height: 9px;
-  border: 6px solid #fff;
-  border-radius: 50%;
-  z-index: 2;
-  background-color: $black;
-}
+@include grid-media($main-grid) {
+  .work h4:before {
+    content: '';
+    position: absolute;
+    top: 42px;
+    left: -31px;
+    display: block;
+    width: 9px;
+    height: 9px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: $black;
+  }
 
-.work-wrap > div:first-child > h4:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -34px;
-  width: 20px;
-  height: 10px;
-  z-index: 1;
-  background-color: #fff;
-}
+  .work-wrap > div:first-child > h4:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -34px;
+    width: 20px;
+    height: 10px;
+    z-index: 1;
+    background-color: #fff;
+  }
 
-.work-wrap:before {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: -7px;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid $black;
+  .work-wrap:before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: -6px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $black;
+  }
 }
-
 .education {
   // border-top: 1px solid $black;
 }
@@ -375,4 +413,8 @@ header .subtitle {
 }
 .education h4 {
   margin-top: 8px;
+}
+
+.portfolio {
+  background-color: $light-grey;
 }
