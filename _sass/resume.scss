@@ -168,14 +168,41 @@ ul {
   padding-left: 0;
   list-style: none;
 
-  &.bulleted {
-    padding-left: $main-gutter / 2;
-    list-style: circle;
+  &.bulleted li {
+    padding-left: 4ch;
+    text-indent: -3ch;
+
+    &:before {
+      content: '—';
+      padding-right: 1.8ch;
+    }
   }
 
   li {
     margin-bottom: 12px;
     line-height: 1;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin-bottom: $main-gutter;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.video-wrap {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.169%;
+
+  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -435,5 +462,6 @@ header .subtitle {
 
 .portfolio {
   min-height: 4000px;
+  // padding: $main-gutter;
   background-color: $light-grey;
 }

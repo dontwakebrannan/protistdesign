@@ -127,3 +127,19 @@ i {
   font-style: normal;
   text-transform: uppercase;
 }
+
+.video-wrap {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.169%;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+
+  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -612,19 +612,19 @@ ul.portfolio-gallery {
     @include grid-container;
     padding-top: 0;
     padding-bottom: 0;
-    > div {
-      /*
-      @include grid-column(12, $main-grid);
-      @include grid-media($main-grid) {
-        @include grid-column(6, $main-grid);
-      }
-      */
-    }
     img {
-      margin-bottom: $main-gutter;
+      margin-bottom: $main-gutter * 2;
       box-shadow: 0 0 6px rgba(0,0,0,0.2);
     }
   }
+}
+// PROJECT LAYOUT BASIC GALLERY
+.project-basic-gallery img {
+  margin-bottom: $main-gutter;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+.project-basic-gallery .video-wrap {
+  width: 100%;
 }
 // PROJECT NAV
 .project-nav {
