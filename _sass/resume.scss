@@ -289,7 +289,6 @@ header .subtitle {
 
 .info h3 {
   margin-bottom: 16px;
-  // line-height: 1.4em;
 }
 
 .history {
@@ -307,7 +306,7 @@ header .subtitle {
   display: flex;
 
   > ul:first-child {
-    width: 50%;
+    min-width: 45% !important;
     padding-right: $main-gutter / 1.5;
     @include grid-media($small-desktops) {
       width: auto;
